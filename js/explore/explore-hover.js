@@ -12,7 +12,7 @@ const title = [
   'North Pole',
   'Arenal Volcano',
   'Detian Falls',
-  'Devetashka cave'
+  'Devetashka Cave'
 ];
 
 module.forEach( elem => {
