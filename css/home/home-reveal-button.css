@@ -1,0 +1,20 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-reveal {
+  background-color: var(--gy-ish-clr);
+  transition: background-color 0.6s ease;
+  font-size: 1.3rem;
+  margin: 160px 0 80px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-reveal:hover {
+  background-color: #d3b98a;
+}

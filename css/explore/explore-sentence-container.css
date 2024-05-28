@@ -1,0 +1,42 @@
+.sentence-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-top: 25px solid var(--yt-clr);
+}
+
+.sentence-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 1400px;
+}
+
+.sentence-1 {
+  justify-self: start;
+}
+
+.sentence-2 {
+  justify-self: center;
+}
+
+.sentence-3 {
+  justify-self: end;
+}
+
+.sentence-1,
+.sentence-2,
+.sentence-3 {
+  color: var(--gy-mid-clr);
+  align-self: center;
+  font-family: Unbounded, Arial;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+@media (max-width: 520px) {
+  .sentence-1,
+  .sentence-3 {
+    justify-self: center;
+  }
+}

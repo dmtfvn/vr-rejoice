@@ -1,0 +1,38 @@
+.sidebar-container {
+  background-color: #ffffffdb;
+  box-shadow: -5px 0 10px #00000015;
+  height: 100%;
+  width: 250px;
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 13px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.sb-explore-link,
+.sb-vision-link,
+.sb-faq-link,
+.sb-manifest-link {
+  margin-top: 30px;
+}
+
+.sb-manifest-link {
+  font-weight: 600;
+}
+
+.close-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .sidebar-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,90 @@
+.header-container {
+  background-color: #f6f6f9e0;
+  backdrop-filter: blur(10px);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.logo-container {
+  background: none;
+  display: flex;
+  margin-right: 75px;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 104px;
+  filter:
+    invert(46%) sepia(6%) saturate(165%) hue-rotate(201deg) brightness(91%) contrast(90%);
+}
+
+.link-container {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore-link,
+.sb-explore-link,
+.vision-link,
+.sb-vision-link,
+.faq-link,
+.sb-faq-link,
+.manifest-link,
+.sb-manifest-link {
+  color: var(--gy-clr);
+  font-size: 0.85rem;
+  font-family: Roboto, Arial;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.explore-link:hover,
+.sb-explore-link:hover,
+.vision-link:hover,
+.sb-vision-link:hover,
+.faq-link:hover,
+.sb-faq-link:hover,
+.manifest-link:hover,
+.sb-manifest-link:hover {
+  color: var(--gd-clr);
+}
+
+.manifest-link {
+  font-weight: 600;
+  margin-left: 75px;
+}
+
+.hb-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 565px) {
+  .header-link {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .hb-icon {
+    display: block;
+  }
+}
