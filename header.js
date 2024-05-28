@@ -1,7 +1,7 @@
 const header = document.getElementById('header');
 
 header.innerHTML = `
-  <a class="logo-container" href="home.html">
+  <a class="logo-container" href="index.html">
     <img class="logo" src="logo/logo.png" alt="0ops...">
   </a>
   <div class="link-container">
