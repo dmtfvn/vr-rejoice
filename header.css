@@ -1,6 +1,7 @@
 .header-container {
   background-color: #f6f6f9e0;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   height: 50px;
   display: flex;
   justify-content: center;
