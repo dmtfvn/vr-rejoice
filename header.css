@@ -86,6 +86,6 @@
   }
 
   .hb-icon {
-    display: block;
+    display: flex;
   }
 }
