@@ -55,7 +55,8 @@
   font-weight: 500;
 }
 
-.btn-toggle-container {
+.btn-toggle-container-one,
+.btn-toggle-container-two {
   background-color: var(--gy-ish-clr);
   display: flex;
   justify-content: space-between;
@@ -65,7 +66,8 @@
   border-radius: 40px;
 }
 
-.btn-toggle-container button {
+.btn-toggle-container-one button,
+.btn-toggle-container-two button {
   background: none;
   height: 60px;
   width: 60px;
@@ -74,11 +76,13 @@
   cursor: pointer;
 }
 
-.btn-toggle-container button:first-child {
+.btn-toggle-container-one button:first-child,
+.btn-toggle-container-two button:first-child {
   background-color: var(--gy-mid-clr);
 }
 
-.btn-toggle-container button:last-child {
+.btn-toggle-container-one button:last-child,
+.btn-toggle-container-two button:last-child {
   background-color: #d4cdcd;
 }
 
