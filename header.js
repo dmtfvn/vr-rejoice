@@ -2,7 +2,7 @@ const header = document.getElementById('header');
 
 header.innerHTML = `
   <a class="logo-container" href="index.html">
-    <img class="logo" src="logo/logo.png" alt="0ops...">
+    <img class="logo" src="logo/logo.png" alt="logotype image">
   </a>
   <div class="link-container">
     <a class="explore-link header-link" href="explore.html">
