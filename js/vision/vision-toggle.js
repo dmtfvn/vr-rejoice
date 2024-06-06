@@ -15,26 +15,6 @@ const style = getComputedStyle(root);
 const darkGray = style.getPropertyValue('--gy-mid-clr');
 const lightGray = '#d4cdcd';
 
-btn[1].addEventListener('click', function () {
-  displayMore(image[0], title[0], line[0], text[0]);
-  swapColor(btn[1], btn[0]);
-});
-
-btn[0].addEventListener('click', function () {
-  displayLess(image[0], title[0], line[0], text[0]);
-  swapColor(btn[0], btn[1]);
-});
-
-btn[3].addEventListener('click', function () {
-  displayMore(image[1], title[1], line[1], text[1]);
-  swapColor(btn[3], btn[2]);
-});
-
-btn[2].addEventListener('click', function () {
-  displayLess(image[1], title[1], line[1], text[1]);
-  swapColor(btn[2], btn[3]);
-});
-
 function displayMore(img, title, sprt, txt) {
   img.style.opacity = lessOpac;
   img.style.transition = 'opacity 0.5s ease-out';
@@ -66,3 +46,23 @@ function swapColor(btnLeft, btnRight) {
   btnLeft.style.backgroundColor = darkGray;
   btnRight.style.backgroundColor = lightGray;
 }
+
+btn[1].addEventListener('click', function () {
+  displayMore(image[0], title[0], line[0], text[0]);
+  swapColor(btn[1], btn[0]);
+});
+
+btn[0].addEventListener('click', function () {
+  displayLess(image[0], title[0], line[0], text[0]);
+  swapColor(btn[0], btn[1]);
+});
+
+btn[3].addEventListener('click', function () {
+  displayMore(image[1], title[1], line[1], text[1]);
+  swapColor(btn[3], btn[2]);
+});
+
+btn[2].addEventListener('click', function () {
+  displayLess(image[1], title[1], line[1], text[1]);
+  swapColor(btn[2], btn[3]);
+});

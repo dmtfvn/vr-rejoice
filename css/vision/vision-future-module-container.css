@@ -55,8 +55,7 @@
   font-weight: 500;
 }
 
-.btn-toggle-container-one,
-.btn-toggle-container-two {
+.btn-toggle-container {
   background-color: var(--gy-ish-clr);
   display: flex;
   justify-content: space-between;
@@ -66,8 +65,7 @@
   border-radius: 40px;
 }
 
-.btn-toggle-container-one button,
-.btn-toggle-container-two button {
+.js-btn-toggle {
   background: none;
   height: 60px;
   width: 60px;
@@ -76,13 +74,13 @@
   cursor: pointer;
 }
 
-.btn-toggle-container-one button:first-child,
-.btn-toggle-container-two button:first-child {
+.js-btn-toggle-clr-1,
+.js-btn-toggle-clr-3 {
   background-color: var(--gy-mid-clr);
 }
 
-.btn-toggle-container-one button:last-child,
-.btn-toggle-container-two button:last-child {
+.js-btn-toggle-clr-2,
+.js-btn-toggle-clr-4 {
   background-color: #d4cdcd;
 }
 
