@@ -65,7 +65,7 @@
   border-radius: 40px;
 }
 
-.js-btn-toggle {
+.btn-toggle-container button {
   background: none;
   height: 60px;
   width: 60px;
@@ -74,14 +74,12 @@
   cursor: pointer;
 }
 
-.js-btn-toggle-clr-1,
-.js-btn-toggle-clr-3 {
-  background-color: var(--gy-mid-clr);
+.btn-toggle-container button:first-child {
+  background-color: hsl(0, 3%, 60%);
 }
 
-.js-btn-toggle-clr-2,
-.js-btn-toggle-clr-4 {
-  background-color: #d4cdcd;
+.btn-toggle-container button:last-child {
+  background-color: hsl(0, 7%, 80%);
 }
 
 @media (max-width: 634px) {

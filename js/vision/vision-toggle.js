@@ -9,11 +9,8 @@ const fullOpac = 1;
 const lessOpac = 0.2;
 const zeroOpac = 0;
 
-const root = document.documentElement;
-const style = getComputedStyle(root);
-
-const darkGray = style.getPropertyValue('--gy-mid-clr');
-const lightGray = '#d4cdcd';
+const darkGray = 'hsl(0, 3%, 60%)';
+const lightGray = 'hsl(0, 7%, 80%)';
 
 function displayMore(img, title, sprt, txt) {
   img.style.opacity = lessOpac;
