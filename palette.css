@@ -1,15 +1,15 @@
 :root {
-  --yt-clr: #fff;
-  --yt-ish-clr: #f6f6f9;
+  --yt-clr: hsl(0, 100%, 100%);
+  --yt-ish-clr: hsl(240, 20%, 97%);
 
-  --bk-clr: #000;
-  --bk-ish-clr: #353434;
+  --bk-clr: hsl(0, 100%, 0%);
+  --bk-ish-clr: hsl(0, 1%, 20%);
 
-  --gy-clr: #6e6e71;
-  --gy-ish-clr: #e9e9e9;
-  --gy-mid-clr: #979191;
+  --gy-clr: hsl(240, 1.35%, 45%);
+  --gy-ish-clr: hsl(0, 0%, 91%);
+  --gy-mid-clr: hsl(0, 3%, 60%);
 
-  --gd-clr: #df6808;
-  --gd-ish-clr: #c48e3096;
-  --gd-drk-clr: #c48e30;
+  --gd-clr: hsl(27, 93%, 45%);
+  --gd-ish-clr: hsl(38, 60%, 70%);
+  --gd-drk-clr: hsl(38, 60%, 48%);
 }

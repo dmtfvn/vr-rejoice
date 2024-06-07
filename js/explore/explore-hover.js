@@ -15,8 +15,17 @@ const title = [
   'Devetashka Cave'
 ];
 
+function insertName(subj, value) {
+  subj.innerText = value;
+}
+
 module.forEach( elem => {
   elem.addEventListener('mouseenter', function () {
+    function mouseEnter(obj, txt, als) {
+      if (elem === obj) {
+        insertName(txt, als);
+      }
+    }
 
     mouseEnter(module[0], text[0], title[0]);
     mouseEnter(module[1], text[1], title[1]);
@@ -29,17 +38,7 @@ module.forEach( elem => {
     mouseEnter(module[8], text[8], title[8]);
     mouseEnter(module[9], text[9], title[9]);
     mouseEnter(module[10], text[10], title[10]);
-
-    function mouseEnter(obj, txt, als) {
-      if (elem === obj) {
-        insertName(txt, als);
-      }
-    }
   });
-
-  function insertName(subj, value) {
-    subj.innerText = value;
-  }
 });
 
 module.forEach( elem => {
