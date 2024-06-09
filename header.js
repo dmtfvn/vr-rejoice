@@ -27,8 +27,10 @@ header.innerHTML = `
 
 const hbIcon = document.querySelector('.js-hb-icon');
 
-hbIcon.addEventListener('click', function () {
+function showSidebar() {
   const element = document.querySelector('.js-sidebar-container');
 
   element.style.display = 'flex';
-});
+}
+
+hbIcon.addEventListener('click', () => showSidebar());

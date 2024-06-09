@@ -20,19 +20,18 @@ sidebar.innerHTML = `
   </a>
 `;
 
-const element = document.querySelector('.js-sidebar-container');
 const xIcon = document.querySelector('.js-close-icon');
 
-xIcon.addEventListener('click', function () {
-  closeSidebar();
-});
+function hideSidebar() {
+  const element = document.querySelector('.js-sidebar-container');
+
+  element.style.display = 'none';
+}
+
+xIcon.addEventListener('click', () => hideSidebar());
 
 window.addEventListener('resize', function () {
   if (this.window.innerWidth > 565) {
-    closeSidebar();
+    hideSidebar();
   }
 });
-
-function closeSidebar() {
-  element.style.display = 'none';
-}
