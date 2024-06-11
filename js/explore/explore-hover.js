@@ -21,23 +21,23 @@ function insertName(subj, value) {
 
 module.forEach( elem => {
   elem.addEventListener('mouseenter', function () {
-    function mouseEnter(obj, txt, als) {
+    function hoverOn(obj, txt, als) {
       if (elem === obj) {
         insertName(txt, als);
       }
     }
 
-    mouseEnter(module[0], text[0], title[0]);
-    mouseEnter(module[1], text[1], title[1]);
-    mouseEnter(module[2], text[2], title[2]);
-    mouseEnter(module[3], text[3], title[3]);
-    mouseEnter(module[4], text[4], title[4]);
-    mouseEnter(module[5], text[5], title[5]);
-    mouseEnter(module[6], text[6], title[6]);
-    mouseEnter(module[7], text[7], title[7]);
-    mouseEnter(module[8], text[8], title[8]);
-    mouseEnter(module[9], text[9], title[9]);
-    mouseEnter(module[10], text[10], title[10]);
+    hoverOn(module[0], text[0], title[0]);
+    hoverOn(module[1], text[1], title[1]);
+    hoverOn(module[2], text[2], title[2]);
+    hoverOn(module[3], text[3], title[3]);
+    hoverOn(module[4], text[4], title[4]);
+    hoverOn(module[5], text[5], title[5]);
+    hoverOn(module[6], text[6], title[6]);
+    hoverOn(module[7], text[7], title[7]);
+    hoverOn(module[8], text[8], title[8]);
+    hoverOn(module[9], text[9], title[9]);
+    hoverOn(module[10], text[10], title[10]);
   });
 });
 

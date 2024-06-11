@@ -1,7 +1,7 @@
 const arrow = document.querySelectorAll('.js-arrow');
 const faq = document.querySelectorAll('.js-faq');
 
-function set(elem) {
+function setClass(elem) {
   elem.classList.toggle('active');
 }
 
@@ -9,7 +9,7 @@ arrow.forEach( item => {
   item.addEventListener('click', function () {
     function showHideAnswer(arrowIndex, faqIndex) {
       if (item === arrowIndex) {
-        set(faqIndex);
+        setClass(faqIndex);
       }
     }
 
