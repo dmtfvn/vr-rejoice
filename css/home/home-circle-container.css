@@ -4,10 +4,11 @@
 }
 
 .circle-total-width {
+  display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 1000px;
-  margin: 80px 0 50px;
+  margin: 50px 0;
 }
 
 .circle {
