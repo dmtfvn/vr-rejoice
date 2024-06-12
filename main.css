@@ -21,3 +21,7 @@ body {
   overflow-y: scroll;
   cursor: default;
 }
+
+body.stop-scrolling {
+  overflow-y: hidden;
+}
