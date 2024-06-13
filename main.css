@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   background-color: var(--yt-ish-clr);
   color: var(--bk-ish-clr);
@@ -22,6 +26,7 @@ body {
   cursor: default;
 }
 
+html.stop-scrolling,
 body.stop-scrolling {
   overflow-y: hidden;
 }
