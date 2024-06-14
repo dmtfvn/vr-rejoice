@@ -19,7 +19,7 @@ function insertName(subj, value) {
   subj.innerText = value;
 }
 
-module.forEach( elem => {
+module.forEach(elem => {
   elem.addEventListener('mouseenter', function () {
     function hoverOn(obj, txt, als) {
       if (elem === obj) {
@@ -41,8 +41,8 @@ module.forEach( elem => {
   });
 });
 
-module.forEach( elem => {
+module.forEach(elem => {
   elem.addEventListener('mouseleave', function () {
-    text.forEach( item => item.innerText = '');
+    text.forEach(item => item.innerText = '');
   });
 });
