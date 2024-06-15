@@ -29,5 +29,5 @@ body {
 html.stop-scrolling,
 body.stop-scrolling {
   overflow-y: hidden;
-  position: relative;
+  touch-action: none;
 }
