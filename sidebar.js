@@ -27,7 +27,6 @@ function hideSidebar() {
 
   element.style.display = 'none';
   document.body.classList.remove('stop-scrolling');
-  document.documentElement.classList.remove('stop-scrolling');
 }
 
 xIcon.addEventListener('click', () => hideSidebar());

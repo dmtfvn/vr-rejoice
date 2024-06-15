@@ -32,7 +32,6 @@ function showSidebar() {
 
   element.style.display = 'flex';
   document.body.classList.add('stop-scrolling');
-  document.documentElement.classList.add('stop-scrolling');
 }
 
 hbIcon.addEventListener('click', () => showSidebar());
