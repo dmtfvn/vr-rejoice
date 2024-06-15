@@ -28,7 +28,6 @@ body {
 
 html.stop-scrolling,
 body.stop-scrolling {
+  position: relative;
   overflow-y: hidden;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
 }
