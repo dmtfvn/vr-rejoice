@@ -28,6 +28,6 @@ body {
 
 html.stop-scrolling,
 body.stop-scrolling {
-  position: relative;
   overflow-y: hidden;
+  position: relative;
 }
