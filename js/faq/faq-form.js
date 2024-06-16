@@ -3,6 +3,15 @@ const dialog = document.getElementsByTagName('dialog')[0];
 const openForm = document.querySelector('.js-open-form');
 const closeForm = document.querySelector('.js-cancel-form');
 
+function eraseDataAndMsg() {
+  user.value = null;
+  errorUser.innerText = null;
+  query.value = null;
+  errorQuery.innerText = null;
+  email.value = null;
+  errorEmail.innerText = null;
+}
+
 openForm.addEventListener('click', function () {
   dialog.showModal();
 });
@@ -30,13 +39,8 @@ const errorUser = document.querySelector('.js-error-msg-name');
 const errorQuery = document.querySelector('.js-error-msg-question');
 const errorEmail = document.querySelector('.js-error-msg-email');
 
-function eraseDataAndMsg() {
-  user.value = null;
-  errorUser.innerText = null;
-  query.value = null;
-  errorQuery.innerText = null;
-  email.value = null;
-  errorEmail.innerText = null;
+function isEmailValid(email) {
+  return /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9]{2}(?:[a-z0-9-]*[a-z0-9])?\.)+(?:[a-z]{2}|com|dev|net|org)\b$/.test(email);
 }
 
 form.addEventListener('submit', function (e) {
@@ -63,11 +67,13 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     errorEmail.innerText = 'This email is not valid';
   }
-
-  function isEmailValid(email) {
-    return /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9]{2}(?:[a-z0-9-]*[a-z0-9])?\.)+(?:[a-z]{2}|com|dev|net|org)\b$/.test(email);
-  }
 });
+
+function removeErrorMsg(step, error) {
+  if (step.value !== '') {
+    error.innerText = '';
+  }
+}
 
 [user, query, email].forEach( elem => {
   elem.addEventListener('input', function () {
@@ -89,10 +95,4 @@ form.addEventListener('submit', function (e) {
       removeErrorMsg(email, errorEmail);
     }
   });
-
-  function removeErrorMsg(step, error) {
-    if (step.value !== '') {
-      error.innerText = '';
-    }
-  }
 });
