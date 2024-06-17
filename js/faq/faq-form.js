@@ -6,9 +6,8 @@ const closeForm = document.querySelector('.js-cancel-form');
 function stopIosScrollY() {
   ['touchmove', 'touchstart', 'touchforcechange'].forEach(evt => {
     document.body.addEventListener(evt, function (e) {
-      e.preventDefault(),
-      {passive: false}
-    })
+      e.preventDefault();
+    }, {passive: false});
   });
 }
 
