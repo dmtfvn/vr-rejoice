@@ -3,10 +3,12 @@ const dialog = document.getElementsByTagName('dialog')[0];
 const openForm = document.querySelector('.js-open-form');
 const closeForm = document.querySelector('.js-cancel-form');
 
-function disableIosScrollY() {
-  window.addEventListener('touchstart', function (e) {
-    e.preventDefault(),
-    {passive: false}
+function stopIosScrollY() {
+  ['touchmove', 'touchstart', 'touchforcechange'].forEach(evt => {
+    document.body.addEventListener(evt, function (e) {
+      e.preventDefault(),
+      {passive: false}
+    })
   });
 }
 
@@ -24,7 +26,7 @@ openForm.addEventListener('click', function () {
   document.body.classList.add('stop-y-scroll');
 
   if (document.body.classList === 'stop-y-scroll') {
-    disableIosScrollY();
+    stopIosScrollY();
   }
 });
 
@@ -37,9 +39,10 @@ closeForm.addEventListener('click', function () {
 
 dialog.addEventListener('keydown', function (e) {
   const pressKey = e.key;
-  document.body.classList.remove('stop-y-scroll');
 
   if (pressKey === 'Escape') {
+    document.body.classList.remove('stop-y-scroll');
+
     eraseDataAndMsg();
   }
 });
