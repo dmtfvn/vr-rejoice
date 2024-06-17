@@ -22,7 +22,7 @@ body {
   cursor: default;
 }
 
-body.stop-scrolling {
+body.stop-y-scroll {
   overflow-y: hidden;
   touch-action: none;
 }
