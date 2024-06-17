@@ -14,15 +14,19 @@ function eraseDataAndMsg() {
 
 openForm.addEventListener('click', function () {
   dialog.showModal();
+  document.body.classList.add('stop-scrolling');
 });
 
 closeForm.addEventListener('click', function () {
   dialog.close();
+  document.body.classList.remove('stop-scrolling');
+
   eraseDataAndMsg();
 });
 
 dialog.addEventListener('keydown', function (e) {
   const pressKey = e.key;
+  document.body.classList.remove('stop-scrolling');
 
   if (pressKey === 'Escape') {
     eraseDataAndMsg();

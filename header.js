@@ -18,11 +18,11 @@ header.innerHTML = `
   <a class="manifest-link header-link" href="manifest.html">
     Manifest
   </a>
-  <div class="hb-icon js-hb-icon">
+  <button class="hb-icon js-hb-icon">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
       <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
     </svg>  
-  </div>
+  </button>
 `;
 
 const hbIcon = document.querySelector('.js-hb-icon');

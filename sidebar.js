@@ -1,11 +1,11 @@
 const sidebar = document.getElementById('sidebar');
 
 sidebar.innerHTML = `
-  <div class="close-icon js-close-icon">
+  <button class="close-icon js-close-icon">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
       <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
     </svg>
-  </div>
+  </button>
   <a class="sb-explore-link" href="explore.html">
     Explore
   </a>

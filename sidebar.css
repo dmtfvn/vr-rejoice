@@ -29,6 +29,9 @@
 }
 
 .close-icon {
+  display: flex;
+  background: none;
+  border: none;
   margin-left: auto;
   cursor: pointer;
 }
