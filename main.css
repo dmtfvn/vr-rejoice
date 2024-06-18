@@ -24,5 +24,5 @@ body {
 
 body.stop-y-scroll {
   overflow-y: hidden;
-  touch-action: none;
+  touch-action: manipulation;
 }
