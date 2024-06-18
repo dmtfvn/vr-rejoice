@@ -3,14 +3,6 @@ const dialog = document.getElementsByTagName('dialog')[0];
 const openForm = document.querySelector('.js-open-form');
 const closeForm = document.querySelector('.js-cancel-form');
 
-function stopIosScrollY() {
-  ['touchmove', 'touchstart', 'touchforcechange'].forEach(evt => {
-    document.body.addEventListener(evt, function (e) {
-      e.preventDefault();
-    }, {passive: false});
-  });
-}
-
 function eraseDataAndMsg() {
   user.value = null;
   errorUser.innerText = null;
@@ -22,16 +14,10 @@ function eraseDataAndMsg() {
 
 openForm.addEventListener('click', function () {
   dialog.showModal();
-  document.body.classList.add('stop-y-scroll');
-
-  if (document.body.classList === 'stop-y-scroll') {
-    stopIosScrollY();
-  }
 });
 
 closeForm.addEventListener('click', function () {
   dialog.close();
-  document.body.classList.remove('stop-y-scroll');
 
   eraseDataAndMsg();
 });
@@ -40,8 +26,6 @@ dialog.addEventListener('keydown', function (e) {
   const pressKey = e.key;
 
   if (pressKey === 'Escape') {
-    document.body.classList.remove('stop-y-scroll');
-
     eraseDataAndMsg();
   }
 });
