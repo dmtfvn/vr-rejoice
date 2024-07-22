@@ -41,7 +41,7 @@ const errorQuery = document.querySelector('.js-error-msg-question');
 const errorEmail = document.querySelector('.js-error-msg-email');
 
 function isEmailValid(email) {
-  return /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9]{2}(?:[a-z0-9-]*[a-z0-9])?\.)+(?:[a-z]{2}|com|dev|net|org)\b$/.test(email);
+  return /(^|(?<=\s))([a-z0-9]{2,}|[a-z]+\.[a-z0-9]+)([_\-\.#]?)([a-z0-9]*)(@)([a-z]{2,}|[a-z]+[0-9]+)([0-9]*)([\-\.]?)([a-z0-9]*)(\.)([a-z]{2}|com|net|org)(\b|(?=\.))/.test(email);
 }
 
 form.addEventListener('submit', function (e) {
