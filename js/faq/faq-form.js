@@ -41,7 +41,7 @@ const errorQuery = document.querySelector('.js-error-msg-question');
 const errorEmail = document.querySelector('.js-error-msg-email');
 
 function isEmailValid(email) {
-  return /(^|(?<=\s))([a-z0-9]{2,}|[a-z]+\.[a-z0-9]+)([_\-\.#]?)([a-z0-9]*)(@)([a-z]{2,}|[a-z]+[0-9]+)([0-9]*)([\-\.]?)([a-z0-9]*)(\.)([a-z]{2}|com|net|org)(\b|(?=\.))/.test(email);
+  return /(?:^|(?<=\s))(?:[a-z0-9]{2,}|[a-z]+\.?[a-z0-9]+)(?:[_\-\.]?)(?:[a-z0-9]*)@(?:[a-z]{2,}|[a-z]+[0-9]+)(?:[0-9]*)(?:[\-\.]?)(?:[a-z0-9]*)\.(?:[a-z]{2}|com|net|org)(?:$|(?=\s))/.test(email);
 }
 
 form.addEventListener('submit', function (e) {
@@ -62,7 +62,7 @@ form.addEventListener('submit', function (e) {
   } else if (emailValue === '') {
     e.preventDefault();
     errorEmail.innerText = 'Please enter your email';
-  } else if (emailValue.length !== 0 && email.value.length <= 10) {
+  } else if (emailValue.length !== 0 && email.value.length <= 7) {
     e.preventDefault();
   } else if (isEmailValid(emailValue) === false) {
     e.preventDefault();
@@ -90,8 +90,8 @@ function removeErrorMsg(step, error) {
       removeErrorMsg(query, errorQuery);
     }
 
-    if (email.value.length !== 0 && email.value.length <= 10) {
-      errorEmail.innerText = 'Email must be longer than 10 characters';
+    if (email.value.length !== 0 && email.value.length <= 7) {
+      errorEmail.innerText = 'Email must be longer than 7 characters';
     } else {
       removeErrorMsg(email, errorEmail);
     }
