@@ -21,9 +21,9 @@ function insertName(subj, value) {
 
 module.forEach(elem => {
   elem.addEventListener('mouseenter', function () {
-    function hoverOn(obj, txt, als) {
+    function hoverOn(obj, txt, name) {
       if (elem === obj) {
-        insertName(txt, als);
+        insertName(txt, name);
       }
     }
 

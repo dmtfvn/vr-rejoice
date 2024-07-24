@@ -49,23 +49,21 @@ form.addEventListener('submit', function (e) {
   const queryValue = query.value.trim();
   const emailValue = email.value.trim();
 
-  if (userValue === '') {
+  if (userValue === '' || userValue.length !== 0 && user.value.length < 2) {
     e.preventDefault();
+
     errorUser.innerText = 'Please enter your name';
-  } else if (userValue.length !== 0 && user.value.length < 2) {
+  } else if (queryValue === '' || queryValue.length !== 0 && query.value.length <= 30) {
     e.preventDefault();
-  } else if (queryValue === '') {
-    e.preventDefault();
+
     errorQuery.innerText = 'Please enter your question';
-  } else if (queryValue.length !== 0 && query.value.length <= 30) {
+  } else if (emailValue === '' || emailValue.length !== 0 && email.value.length <= 7) {
     e.preventDefault();
-  } else if (emailValue === '') {
-    e.preventDefault();
+
     errorEmail.innerText = 'Please enter your email';
-  } else if (emailValue.length !== 0 && email.value.length <= 7) {
+  } else if (!isEmailValid(emailValue)) {
     e.preventDefault();
-  } else if (isEmailValid(emailValue) === false) {
-    e.preventDefault();
+
     errorEmail.innerText = 'This email is not valid';
   }
 });
