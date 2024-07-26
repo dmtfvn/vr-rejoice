@@ -13,7 +13,7 @@ body {
   background-color: var(--yt-ish-clr);
   color: var(--bk-ish-clr);
   font-family: Roboto, Arial;
-  min-height: 100dvh;
+  min-height: 100svh;
   position: relative;
   padding-top: 50px;
   padding-bottom: 100px;
