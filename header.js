@@ -31,7 +31,7 @@ function showSidebar() {
   const element = document.querySelector('.js-sidebar-container');
 
   element.style.display = 'flex';
-  document.body.classList.add('stop-y-scroll');
+  // document.body.classList.add('stop-y-scroll');
 }
 
 hbIcon.addEventListener('click', () => showSidebar());

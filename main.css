@@ -13,8 +13,7 @@ body {
   background-color: var(--yt-ish-clr);
   color: var(--bk-ish-clr);
   font-family: Roboto, Arial;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 100dvh;
   position: relative;
   padding-top: 50px;
   padding-bottom: 100px;
@@ -22,7 +21,7 @@ body {
   cursor: default;
 }
 
-body.stop-y-scroll {
+/* body.stop-y-scroll {
   overflow-y: hidden;
   touch-action: none;
-}
+} */
