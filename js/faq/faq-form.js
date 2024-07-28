@@ -5,17 +5,17 @@ const closeForm = document.querySelector('.js-cancel-form');
 
 const form = document.getElementById('form');
 
-const inputUser = document.getElementById('name');
+const inputName = document.getElementById('name');
 const inputQuery = document.getElementById('query');
 const inputEmail = document.getElementById('email');
 
-const errorMsgUser = document.querySelector('.js-error-msg-name');
+const errorMsgName = document.querySelector('.js-error-msg-name');
 const errorMsgQuery = document.querySelector('.js-error-msg-query');
 const errorMsgEmail = document.querySelector('.js-error-msg-email');
 
 function eraseDataAndMsg() {
-  inputUser.value = null;
-  errorMsgUser.innerText = null;
+  inputName.value = null;
+  errorMsgName.innerText = null;
   inputQuery.value = null;
   errorMsgQuery.innerText = null;
   inputEmail.value = null;
@@ -50,16 +50,16 @@ function removeErrorMsg(step, error) {
   }
 }
 
-[inputUser, inputQuery, inputEmail].forEach( elem => {
+[inputName, inputQuery, inputEmail].forEach( elem => {
   elem.addEventListener('input', function () {
-    curUser = inputUser.value.trim();
+    curUser = inputName.value.trim();
     curQuery = inputQuery.value.trim();
     curEmail = inputEmail.value.trim();
 
     if (curUser.length !== 0 && curUser.length < 2) {
-      errorMsgUser.innerText = 'Name must be longer than 1 character';
+      errorMsgName.innerText = 'Name must be longer than 1 character';
     } else {
-      removeErrorMsg(inputUser, errorMsgUser);
+      removeErrorMsg(inputName, errorMsgName);
     }
 
     if (curQuery.length !== 0 && curQuery.length <= 30) {
@@ -84,8 +84,8 @@ form.addEventListener('submit', function (e) {
   if (curUser === '' || curUser.length !== 0 && curUser.length < 2) {
     e.preventDefault();
 
-    errorMsgUser.innerText = 'Please enter your name';
-    inputUser.focus();
+    errorMsgName.innerText = 'Please enter your name';
+    inputName.focus();
   } else if (curQuery === '' || curQuery.length !== 0 && curQuery.length <= 30) {
     e.preventDefault();
 
