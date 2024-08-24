@@ -31,8 +31,8 @@ function hideSidebar() {
 
 xIcon.addEventListener('click', () => hideSidebar());
 
-window.addEventListener('resize', function () {
-  if (this.window.innerWidth > 565) {
+window.addEventListener('resize', () => {
+  if (this.innerWidth > 565) {
     hideSidebar();
   }
 });
