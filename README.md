@@ -1,6 +1,6 @@
 # Virtual reality software advertisement website
 
-A multi-page application, presenting a variety of software for virtual reality. The site have a Home page, a small Product page, an FAQ page with option to ask a question through sending a form, and couple more.
+A multi-page application, presenting a variety of software for virtual reality. The site have a Home page, a small Product page, an FAQ page with option to ask a question through submitting a form, and couple more.
 
 *This project was entirely created by using pure vanilla javascript.*
 
