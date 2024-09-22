@@ -6,19 +6,26 @@ sidebar.innerHTML = `
       <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
     </svg>
   </button>
-  <a class="sb-explore-link" href="explore.html">
+  <a class="sidebar-link" href="explore.html">
     Explore
   </a>
-  <a class="sb-vision-link" href="vision.html">
+  <a class="sidebar-link" href="vision.html">
     Vision
   </a>
-  <a class="sb-faq-link" href="faq.html">
+  <a class="sidebar-link" href="faq.html">
     FAQ
   </a>
-  <a class="sb-manifest-link" href="manifest.html">
+  <a class="sidebar-link" href="manifest.html">
     Manifest
   </a>
 `;
+
+const links = document.querySelectorAll('.sidebar-link');
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    hideSidebar();
+  });
+});
 
 const xIcon = document.querySelector('.js-close-icon');
 

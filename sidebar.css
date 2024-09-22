@@ -16,16 +16,19 @@
   z-index: 5;
 }
 
-.sb-explore-link,
-.sb-vision-link,
-.sb-faq-link,
-.sb-manifest-link {
+.sidebar-link {
+  color: var(--gy-clr);
   font-size: 1.2rem;
+  font-family: Roboto, Arial;
+  cursor: pointer;
+  text-decoration: none;
   margin-top: 30px;
-}
-
-.sb-manifest-link {
-  font-weight: 600;
+  &:last-child {
+    font-weight: 600;
+  }
+  &:hover {
+    color: var(--gd-clr);
+  }
 }
 
 .close-icon {

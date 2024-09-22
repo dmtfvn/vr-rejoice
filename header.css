@@ -17,8 +17,6 @@
 .logo-container {
   background: none;
   display: flex;
-  margin-right: 75px;
-  padding-left: 8px;
   cursor: pointer;
 }
 
@@ -29,41 +27,26 @@
 }
 
 .link-container {
-  width: 200px;
+  max-width: 600px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.explore-link,
-.sb-explore-link,
-.vision-link,
-.sb-vision-link,
-.faq-link,
-.sb-faq-link,
-.manifest-link,
-.sb-manifest-link {
+.header-link {
   color: var(--gy-clr);
   font-size: 0.85rem;
   font-family: Roboto, Arial;
   padding: 5px;
   cursor: pointer;
   text-decoration: none;
-}
-
-.explore-link:hover,
-.sb-explore-link:hover,
-.vision-link:hover,
-.sb-vision-link:hover,
-.faq-link:hover,
-.sb-faq-link:hover,
-.manifest-link:hover,
-.sb-manifest-link:hover {
-  color: var(--gd-clr);
-}
-
-.manifest-link {
-  font-weight: 600;
-  margin-left: 75px;
+  &:last-child {
+    font-weight: 600;
+  }
+  &:hover {
+    color: var(--gd-clr);
+  }
 }
 
 .hb-icon {
@@ -80,11 +63,6 @@
 
   .header-container {
     justify-content: space-between;
-  }
-
-  .logo-container {
-    margin-right: 0;
-    padding-left: 0;
   }
 
   .hb-icon {
