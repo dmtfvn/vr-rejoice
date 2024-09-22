@@ -15,11 +15,11 @@ const errorMsgEmail = document.querySelector('.js-error-msg-email');
 
 function eraseDataAndMsg() {
   inputName.value = null;
-  errorMsgName.innerText = null;
+  errorMsgName.textContent = null;
   inputQuery.value = null;
-  errorMsgQuery.innerText = null;
+  errorMsgQuery.textContent = null;
   inputEmail.value = null;
-  errorMsgEmail.innerText = null;
+  errorMsgEmail.textContent = null;
 }
 
 openForm.addEventListener('click', function () {
@@ -46,7 +46,7 @@ let curEmail = '';
 
 function removeErrorMsg(step, error) {
   if (step.value !== '') {
-    error.innerText = '';
+    error.textContent = '';
   }
 }
 
@@ -57,19 +57,19 @@ function removeErrorMsg(step, error) {
     curEmail = inputEmail.value.trim();
 
     if (curUser.length !== 0 && curUser.length < 2) {
-      errorMsgName.innerText = 'Name must be longer than 1 character';
+      errorMsgName.textContent = 'Name must be longer than 1 character';
     } else {
       removeErrorMsg(inputName, errorMsgName);
     }
 
     if (curQuery.length !== 0 && curQuery.length <= 30) {
-      errorMsgQuery.innerText = 'Question must be longer than 30 characters';
+      errorMsgQuery.textContent = 'Question must be longer than 30 characters';
     } else {
       removeErrorMsg(inputQuery, errorMsgQuery);
     }
 
     if (curEmail.length !== 0 && curEmail.length <= 7) {
-      errorMsgEmail.innerText = 'Email must be longer than 7 characters';
+      errorMsgEmail.textContent = 'Email must be longer than 7 characters';
     } else {
       removeErrorMsg(inputEmail, errorMsgEmail);
     }
@@ -86,22 +86,22 @@ form.addEventListener('submit', function (e) {
   if (curUser === '' || curUser.length !== 0 && curUser.length < 2) {
     e.preventDefault();
 
-    errorMsgName.innerText = 'Please enter your name';
+    errorMsgName.textContent = 'Please enter your name';
     inputName.focus();
   } else if (curQuery === '' || curQuery.length !== 0 && curQuery.length <= 30) {
     e.preventDefault();
 
-    errorMsgQuery.innerText = 'Please enter your question';
+    errorMsgQuery.textContent = 'Please enter your question';
     inputQuery.focus();
   } else if (curEmail === '' || curEmail.length !== 0 && curEmail.length <= 7) {
     e.preventDefault();
 
-    errorMsgEmail.innerText = 'Please enter your email';
+    errorMsgEmail.textContent = 'Please enter your email';
     inputEmail.focus();
   } else if (!isEmailValid) {
     e.preventDefault();
 
-    errorMsgEmail.innerText = 'This email is not valid';
+    errorMsgEmail.textContent = 'This email is not valid';
     inputEmail.focus();
   }
 });

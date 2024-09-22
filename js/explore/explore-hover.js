@@ -16,7 +16,7 @@ const title = [
 ];
 
 function insertName(subj, value) {
-  subj.innerText = value;
+  subj.textContent = value;
 }
 
 module.forEach(elem => {
@@ -43,6 +43,6 @@ module.forEach(elem => {
 
 module.forEach(elem => {
   elem.addEventListener('mouseleave', function () {
-    text.forEach(item => item.innerText = '');
+    text.forEach(item => item.textContent = '');
   });
 });
