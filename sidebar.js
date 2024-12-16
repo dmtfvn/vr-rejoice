@@ -1,33 +1,30 @@
-const sidebar = document.getElementById('sidebar');
+import { createLinkEl } from './helpers/createLink.js';
+import { createSvgEl } from './helpers/createSvg.js';
 
-sidebar.innerHTML = `
-  <button class="close-icon js-close-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-      <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-    </svg>
-  </button>
-  <a class="sidebar-link" href="explore.html">
-    Explore
-  </a>
-  <a class="sidebar-link" href="vision.html">
-    Vision
-  </a>
-  <a class="sidebar-link" href="faq.html">
-    FAQ
-  </a>
-  <a class="sidebar-link" href="manifest.html">
-    Manifest
-  </a>
-`;
+const sidebarEl = document.getElementById('sidebar');
+sidebarEl.addEventListener('DOMContentLoaded', createSidebar());
 
-const links = document.querySelectorAll('.sidebar-link');
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    hideSidebar();
-  });
+function createSidebar() {
+  const closeSbBtn = document.createElement('button');
+  closeSbBtn.classList.add('close-icon');
+  closeSbBtn.classList.add('js-close-icon');
+
+  closeSbBtn.appendChild(
+    createSvgEl('m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z')
+  );
+
+  sidebarEl.appendChild(closeSbBtn);
+  sidebarEl.appendChild(createLinkEl('sidebar-link', 'explore.html', 'Explore'));
+  sidebarEl.appendChild(createLinkEl('sidebar-link', 'vision.html', 'Vision'));
+  sidebarEl.appendChild(createLinkEl('sidebar-link', 'faq.html', 'FAQ'));
+  sidebarEl.appendChild(createLinkEl('sidebar-link', 'manifest.html', 'Manifest'));
+}
+
+document.querySelectorAll('.sidebar-link').forEach(link => {
+  link.addEventListener('click', () => hideSidebar());
 });
 
-const xIcon = document.querySelector('.js-close-icon');
+document.querySelector('.js-close-icon').addEventListener('click', () => hideSidebar());
 
 function hideSidebar() {
   const element = document.querySelector('.js-sidebar-container');
@@ -36,10 +33,8 @@ function hideSidebar() {
   document.body.classList.remove('stop-y-scroll');
 }
 
-xIcon.addEventListener('click', () => hideSidebar());
-
 window.addEventListener('resize', () => {
-  if (this.innerWidth > 565) {
+  if (innerWidth > 565) {
     hideSidebar();
   }
 });

@@ -1,7 +1,10 @@
-const headerEl = document.getElementById('header');
-headerEl.addEventListener('DOMContentLoaded', createNav());
+import { createLinkEl } from './helpers/createLink.js';
+import { createSvgEl } from './helpers/createSvg.js';
 
-function createNav() {
+const headerEl = document.getElementById('header');
+headerEl.addEventListener('DOMContentLoaded', createNavbar());
+
+function createNavbar() {
   const linkWrapper = document.createElement('div');
   linkWrapper.className = 'link-container';
 
@@ -14,23 +17,13 @@ function createNav() {
 
   logoEl.appendChild(imgEl);
 
-  const sidebarBtn = document.createElement('button');
-  sidebarBtn.classList.add('hb-icon');
-  sidebarBtn.classList.add('js-hb-icon');
+  const openSbBtn = document.createElement('button');
+  openSbBtn.classList.add('hb-icon');
+  openSbBtn.classList.add('js-hb-icon');
 
-  const svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svgIcon.setAttribute('width', '24px');
-  svgIcon.setAttribute('height', '24px');
-  svgIcon.setAttribute('viewBox', '0 -960 960 960');
-
-  const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  svgPath.setAttribute(
-    'd',
-    'M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z'
+  openSbBtn.appendChild(
+    createSvgEl('M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z')
   );
-
-  svgIcon.appendChild(svgPath);
-  sidebarBtn.appendChild(svgIcon);
 
   linkWrapper.appendChild(logoEl);
   linkWrapper.appendChild(createLinkEl('header-link', 'explore.html', 'Explore'));
@@ -39,19 +32,7 @@ function createNav() {
   linkWrapper.appendChild(createLinkEl('header-link', 'manifest.html', 'Manifest'));
 
   headerEl.appendChild(linkWrapper);
-  headerEl.appendChild(sidebarBtn);
-
-  function createLinkEl(classAttr, hypLink, content) {
-    const aTag = document.createElement('a');
-    aTag.className = classAttr;
-    aTag.href = hypLink;
-
-    if (content) {
-      aTag.textContent = content;
-    }
-
-    return aTag;
-  }
+  headerEl.appendChild(openSbBtn);
 }
 
 document.querySelector('.js-hb-icon').addEventListener('click', () => showSidebar());
