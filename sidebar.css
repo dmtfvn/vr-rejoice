@@ -23,11 +23,9 @@
   cursor: pointer;
   text-decoration: none;
   margin-top: 30px;
+
   &:last-child {
     font-weight: 600;
-  }
-  &:hover {
-    color: var(--gd-clr);
   }
 }
 

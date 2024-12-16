@@ -1,7 +1,28 @@
-const footer = document.getElementById('footer');
+const footerEl = document.getElementById('footer');
+footerEl.addEventListener('DOMContentLoaded', createFooter());
 
-footer.innerHTML = `
-  <p class="copyright">
-    Copyright &#169; 2024 <span class="rejoice">&#183; rejoice</span> Inc. All rights reserved.
-  </p>
-`;
+function createFooter() {
+  const copyright = String.fromCodePoint(169);
+  const dot = String.fromCharCode(183);
+
+  const paraEl = document.createElement('p');
+  paraEl.className = 'copyright';
+
+  const spanEl = document.createElement('span');
+  spanEl.className = 'rejoice';
+  spanEl.textContent = `${dot} rejoice`;
+
+  paraEl.appendChild(spanEl);
+
+  paraEl.insertAdjacentHTML(
+    'afterbegin',
+    `Copyright ${copyright} 2024 `
+  );
+
+  paraEl.insertAdjacentHTML(
+    'beforeend',
+    ' Inc. All rights reserved.'
+  );
+
+  footerEl.appendChild(paraEl);
+}
