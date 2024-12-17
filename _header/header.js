@@ -1,11 +1,10 @@
 import { createLinkEl } from '../helpers/createLink.js';
 import { createSvgEl } from '../helpers/createSvg.js';
 
-window.addEventListener('DOMContentLoaded', createNavbar());
+const headerEl = document.getElementById('header');
+headerEl.addEventListener('DOMContentLoaded', createNavbar());
 
 function createNavbar() {
-  const headerEl = document.getElementById('header');
-
   const linkWrapper = document.createElement('div');
   linkWrapper.className = 'link-container';
 

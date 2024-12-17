@@ -1,11 +1,10 @@
 import { createLinkEl } from '../helpers/createLink.js';
 import { createSvgEl } from '../helpers/createSvg.js';
 
-window.addEventListener('DOMContentLoaded', createSidebar());
+const sidebarEl = document.getElementById('sidebar');
+sidebarEl.addEventListener('DOMContentLoaded', createSidebar());
 
 function createSidebar() {
-  const sidebarEl = document.getElementById('sidebar');
-
   const closeSbBtn = document.createElement('button');
   closeSbBtn.classList.add('close-icon');
   closeSbBtn.classList.add('js-close-icon');
