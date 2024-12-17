@@ -1,5 +1,5 @@
-import { createLinkEl } from '../helpers/createLink.js';
-import { createSvgEl } from '../helpers/createSvg.js';
+import { createLinkEl } from './helpers/createLink.js';
+import { createSvgEl } from './helpers/createSvg.js';
 
 const sidebarEl = document.getElementById('sidebar');
 sidebarEl.addEventListener('DOMContentLoaded', createSidebar());
