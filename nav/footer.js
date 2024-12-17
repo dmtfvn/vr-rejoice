@@ -1,7 +1,8 @@
-const footerEl = document.getElementById('footer');
-footerEl.addEventListener('DOMContentLoaded', createFooter());
+window.addEventListener('DOMContentLoaded', createFooter());
 
 function createFooter() {
+  const footerEl = document.getElementById('footer');
+
   const copyright = String.fromCodePoint(169);
   const dot = String.fromCharCode(183);
 
