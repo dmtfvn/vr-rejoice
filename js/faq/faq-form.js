@@ -14,12 +14,12 @@ const errorMsgQuery = document.querySelector('.js-error-msg-query');
 const errorMsgEmail = document.querySelector('.js-error-msg-email');
 
 function eraseDataAndMsg() {
-  inputName.value = null;
-  errorMsgName.textContent = null;
-  inputQuery.value = null;
-  errorMsgQuery.textContent = null;
-  inputEmail.value = null;
-  errorMsgEmail.textContent = null;
+  inputName.value = '';
+  errorMsgName.textContent = '';
+  inputQuery.value = '';
+  errorMsgQuery.textContent = '';
+  inputEmail.value = '';
+  errorMsgEmail.textContent = '';
 }
 
 openForm.addEventListener('click', function () {
@@ -50,7 +50,7 @@ function removeErrorMsg(step, error) {
   }
 }
 
-[inputName, inputQuery, inputEmail].forEach( elem => {
+[inputName, inputQuery, inputEmail].forEach(elem => {
   elem.addEventListener('input', function () {
     curUser = inputName.value.trim();
     curQuery = inputQuery.value.trim();

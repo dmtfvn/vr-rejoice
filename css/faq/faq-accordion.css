@@ -38,6 +38,8 @@ summary {
   line-height: 1.6;
   font-weight: 700;
   list-style: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .arrow {
@@ -53,5 +55,6 @@ summary {
 }
 
 details[open] .arrow svg {
+  fill: var(--gd-clr);
   transform: rotate(180deg);
 }
