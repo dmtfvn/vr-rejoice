@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="nav/footer.css">
 
   <link rel="stylesheet" href="css/faq/faq-sentence.css">
-  <link rel="stylesheet" href="css/faq/faq-faq-container.css">
+  <link rel="stylesheet" href="css/faq/faq-accordion.css">
   <link rel="stylesheet" href="css/faq/faq-form.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,6 @@
   <script src="nav/header.js" type="module"></script>
   <script src="nav/sidebar.js" type="module"></script>
   <script src="nav/footer.js" defer></script>
-  <script src="js/faq/faq-toggle.js" defer></script>
   <script src="js/faq/faq-form.js" defer></script>
 </head>
 
@@ -51,143 +50,118 @@
     </p>
   </div>
   <div class="faq-container">
-    <div class="faq-width">
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            What is rejoice?
-          </h4>
-          <button class="arrow js-arrow">
+    <div class="accordion">
+      <details>
+        <summary>
+          What is rejoice?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            Rejoice is a company, specializing in the field of VR software development.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            What are the product types?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          Rejoice is a company, specializing in the field of VR software development.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          What are the product types?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            The company offers many different modules. Each contains a realistic, visual representation.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            What is a module?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          The company offers many different modules. Each contains a realistic, visual representation.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          What is a module?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            A module is a dedicated proprietary software, specially build for delivering an exclusive ocular enjoyment.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            How does it work?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          A module is a dedicated proprietary software, specially build for delivering an exclusive ocular enjoyment.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          How does it work?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            Every module can be seamlessly initiated, after being integrated with a VR headset. A step-by-step guide is included in all our products.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            I want to be assured of the quality of a particular module. Can I have a demo?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          Every module can be seamlessly initiated, after being integrated with a VR headset. A step-by-step guide is included in all our products.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          I want to be assured of the quality of a particular module. Can I have a demo?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            Certainly. Although the significantly short duration, the fidelity is exactly the same.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            Do I need a wi-fi connection to start a module?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          Certainly. Although the significantly short duration, the fidelity is exactly the same.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Do I need a wi-fi connection to start a module?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            There is no such restriction. A connection to the internet is required only for the download itself.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            Can I share my module?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          There is no such restriction. A connection to the internet is required only for the download itself.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Can I share my module?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            Modules are bound with your personal email address, and this link can't be undone.
-          </p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="question">
-          <h4>
-            How can I make a request?
-          </h4>
-          <button class="arrow js-arrow">
+          </div>
+        </summary>
+        <p>
+          Modules are bound with your personal email address, and this link can't be undone.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          How can I make a request?
+          <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
             </svg>
-          </button>
-        </div>
-        <div class="answer">
-          <p>
-            All modules are named. The name can be viewed by a simple hover. After sending us the name/names to my_vr_choice@rejoice.io, you will receive your collect path.
-          </p>
-        </div>
-      </div>
+          </div>
+        </summary>
+        <p>
+          All modules are named. The name can be viewed by a simple hover. After sending us the name/names to my_vr_choice@rejoice.io, you will receive your collect path.
+        </p>
+      </details>
     </div>
   </div>
   <div class="sentence-container">
