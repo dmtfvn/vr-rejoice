@@ -45,6 +45,8 @@ summary {
   align-items: center;
   background: none;
   border: none;
+  appearance: none;
+  -webkit-appearance: none;
   margin-left: 15px;
 }
 
