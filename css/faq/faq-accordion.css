@@ -34,6 +34,11 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
+details,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
 summary {
   display: flex;
   justify-content: space-between;
