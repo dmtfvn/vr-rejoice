@@ -44,8 +44,8 @@ let curUser = '';
 let curQuery = '';
 let curEmail = '';
 
-function removeErrorMsg(inputEl, errorMsgEl) {
-  if (inputEl.value !== '') {
+function removeErrorMsg(inputValue, errorMsgEl) {
+  if (inputValue !== '') {
     errorMsgEl.textContent = '';
   }
 }
@@ -56,17 +56,9 @@ function removeErrorMsg(inputEl, errorMsgEl) {
     curQuery = inputQuery.value.trim();
     curEmail = inputEmail.value.trim();
 
-    if (curUser.length !== 0) {
-      removeErrorMsg(inputName, errorMsgName);
-    }
-
-    if (curQuery.length !== 0) {
-      removeErrorMsg(inputQuery, errorMsgQuery);
-    }
-
-    if (curEmail.length !== 0) {
-      removeErrorMsg(inputEmail, errorMsgEmail);
-    }
+    removeErrorMsg(curUser, errorMsgName);
+    removeErrorMsg(curQuery, errorMsgQuery);
+    removeErrorMsg(curEmail, errorMsgEmail);
   });
 });
 
