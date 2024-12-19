@@ -5,7 +5,6 @@
 
 body {
   background-color: var(--yt-ish-clr);
-  font: inherit;
   color: var(--bk-ish-clr);
   min-height: 100dvh;
   display: flex;
@@ -18,9 +17,4 @@ body {
 
 body>main {
   flex-grow: 1;
-}
-
-body.stop-y-scroll {
-  overflow-y: hidden;
-  touch-action: none;
 }

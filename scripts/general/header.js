@@ -9,7 +9,7 @@ function showSidebar() {
   const sidebar = document.querySelector('.js-sidebar-container');
 
   sidebar.style.display = 'flex';
-  document.body.classList.add('stop-y-scroll');
+  disableScroll();
 }
 
 function createNavbar() {
@@ -40,4 +40,13 @@ function createNavbar() {
 
   headerEl.appendChild(navEl);
   headerEl.appendChild(openSbBtn);
+}
+
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+  document.body.addEventListener('touchmove', preventDefault, { passive: false });
+}
+
+function preventDefault(e) {
+  e.preventDefault();
 }

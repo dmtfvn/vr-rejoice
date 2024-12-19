@@ -19,7 +19,7 @@ function hideSidebar() {
   const sidebar = document.querySelector('.js-sidebar-container');
 
   sidebar.style.display = 'none';
-  document.body.classList.remove('stop-y-scroll');
+  enableScroll();
 }
 
 function createSidebar() {
@@ -37,4 +37,13 @@ function createSidebar() {
   sidebarEl.appendChild(createLinkEl('sidebar-link', 'vision.html', 'Vision'));
   sidebarEl.appendChild(createLinkEl('sidebar-link', 'faq.html', 'FAQ'));
   sidebarEl.appendChild(createLinkEl('sidebar-link', 'manifest.html', 'Manifest'));
+}
+
+function enableScroll() {
+  document.body.style.overflow = '';
+  document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+}
+
+function preventDefault(e) {
+  e.preventDefault();
 }
