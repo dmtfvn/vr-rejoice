@@ -1,13 +1,13 @@
-const dialog = document.getElementsByTagName('dialog')[0];
+const dialog = document.querySelector('.dialog');
 
 const openForm = document.querySelector('.js-open-form');
 const closeForm = document.querySelector('.js-cancel-form');
 
-const form = document.getElementById('form');
+const form = document.querySelector('#form');
 
-const inputName = document.getElementById('name');
-const inputQuery = document.getElementById('query');
-const inputEmail = document.getElementById('email');
+const inputName = document.querySelector('#name');
+const inputQuery = document.querySelector('#query');
+const inputEmail = document.querySelector('#email');
 
 const errorMsgName = document.querySelector('.js-error-msg-name');
 const errorMsgQuery = document.querySelector('.js-error-msg-query');
@@ -44,9 +44,9 @@ let curUser = '';
 let curQuery = '';
 let curEmail = '';
 
-function removeErrorMsg(step, error) {
-  if (step.value !== '') {
-    error.textContent = '';
+function removeErrorMsg(inputEl, errorMsgEl) {
+  if (inputEl.value !== '') {
+    errorMsgEl.textContent = '';
   }
 }
 
@@ -56,21 +56,15 @@ function removeErrorMsg(step, error) {
     curQuery = inputQuery.value.trim();
     curEmail = inputEmail.value.trim();
 
-    if (curUser.length !== 0 && curUser.length < 2) {
-      errorMsgName.textContent = 'Name must be longer than 1 character';
-    } else {
+    if (curUser.length !== 0) {
       removeErrorMsg(inputName, errorMsgName);
     }
 
-    if (curQuery.length !== 0 && curQuery.length <= 30) {
-      errorMsgQuery.textContent = 'Question must be longer than 30 characters';
-    } else {
+    if (curQuery.length !== 0) {
       removeErrorMsg(inputQuery, errorMsgQuery);
     }
 
-    if (curEmail.length !== 0 && curEmail.length <= 7) {
-      errorMsgEmail.textContent = 'Email must be longer than 7 characters';
-    } else {
+    if (curEmail.length !== 0) {
       removeErrorMsg(inputEmail, errorMsgEmail);
     }
   });
@@ -86,17 +80,17 @@ form.addEventListener('submit', function (e) {
   if (curUser === '' || curUser.length !== 0 && curUser.length < 2) {
     e.preventDefault();
 
-    errorMsgName.textContent = 'Please enter your name';
+    errorMsgName.textContent = 'Name must be longer than 1 character';
     inputName.focus();
   } else if (curQuery === '' || curQuery.length !== 0 && curQuery.length <= 30) {
     e.preventDefault();
 
-    errorMsgQuery.textContent = 'Please enter your question';
+    errorMsgQuery.textContent = 'Question must be longer than 30 characters';
     inputQuery.focus();
   } else if (curEmail === '' || curEmail.length !== 0 && curEmail.length <= 7) {
     e.preventDefault();
 
-    errorMsgEmail.textContent = 'Please enter your email';
+    errorMsgEmail.textContent = 'Email must be longer than 7 characters';
     inputEmail.focus();
   } else if (!isEmailValid) {
     e.preventDefault();
