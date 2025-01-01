@@ -1,0 +1,15 @@
+:root {
+  --yt-clr: hsl(0, 100%, 100%);
+  --yt-ish-clr: hsl(240, 20%, 97%);
+
+  --bk-clr: hsl(0, 100%, 0%);
+  --bk-ish-clr: hsl(0, 1%, 20%);
+
+  --gy-clr: hsl(240, 1.35%, 45%);
+  --gy-ish-clr: hsl(0, 0%, 91%);
+  --gy-mid-clr: hsl(0, 3%, 60%);
+
+  --gd-clr: hsl(27, 93%, 45%);
+  --gd-ish-clr: hsl(38, 60%, 70%);
+  --gd-drk-clr: hsl(38, 60%, 48%);
+}

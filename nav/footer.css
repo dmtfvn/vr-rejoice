@@ -1,24 +1,16 @@
-.footer-container {
-  height: 100px;
+footer {
   display: flex;
   justify-content: center;
 }
 
-#footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.copyright {
-  font-size: 1rem;
+footer>p {
+  font-family: inherit;
   font-weight: 600;
   color: var(--gy-mid-clr);
   border-top: 1px solid var(--gy-mid-clr);
-  padding: 40px 10px 0;
+  padding: 35px 10px;
 }
 
-.rejoice {
+footer span {
   color: hsl(0, 0%, 38%);
 }

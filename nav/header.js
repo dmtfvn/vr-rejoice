@@ -1,46 +1,37 @@
-import { createLinkEl } from '../helpers/createLink.js';
-import { createSvgEl } from '../helpers/createSvg.js';
+import { createLinkEl } from '../utils/createLink.js';
+import { createSvgEl } from '../utils/createSvg.js';
+import { toggleSidebar } from '../utils/toggleSidebar.js';
 
 window.addEventListener('DOMContentLoaded', createNavbar());
 
-function createNavbar() {
-  const headerEl = document.getElementById('header');
+document.querySelector('.js-hb-icon').addEventListener('click', () => toggleSidebar('flex'));
 
-  const linkWrapper = document.createElement('div');
-  linkWrapper.className = 'link-container';
+function createNavbar() {
+  const headerEl = document.querySelector('header');
+
+  const navEl = document.createElement('nav');
 
   const logoEl = createLinkEl('logo-container', 'index.html');
 
   const imgEl = document.createElement('img');
-  imgEl.className = 'logo';
   imgEl.src = 'logo/logo.png';
   imgEl.alt = 'logotype image';
 
   logoEl.appendChild(imgEl);
 
   const openSbBtn = document.createElement('button');
-  openSbBtn.classList.add('hb-icon');
   openSbBtn.classList.add('js-hb-icon');
 
   openSbBtn.appendChild(
     createSvgEl('M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z')
   );
 
-  linkWrapper.appendChild(logoEl);
-  linkWrapper.appendChild(createLinkEl('header-link', 'explore.html', 'Explore'));
-  linkWrapper.appendChild(createLinkEl('header-link', 'vision.html', 'Vision'));
-  linkWrapper.appendChild(createLinkEl('header-link', 'faq.html', 'FAQ'));
-  linkWrapper.appendChild(createLinkEl('header-link', 'manifest.html', 'Manifest'));
+  navEl.appendChild(logoEl);
+  navEl.appendChild(createLinkEl('header-link', 'explore.html', 'Explore'));
+  navEl.appendChild(createLinkEl('header-link', 'vision.html', 'Vision'));
+  navEl.appendChild(createLinkEl('header-link', 'faq.html', 'FAQ'));
+  navEl.appendChild(createLinkEl('header-link', 'manifest.html', 'Manifest'));
 
-  headerEl.appendChild(linkWrapper);
+  headerEl.appendChild(navEl);
   headerEl.appendChild(openSbBtn);
-}
-
-document.querySelector('.js-hb-icon').addEventListener('click', () => showSidebar());
-
-function showSidebar() {
-  const element = document.querySelector('.js-sidebar-container');
-
-  element.style.display = 'flex';
-  document.body.classList.add('stop-y-scroll');
 }

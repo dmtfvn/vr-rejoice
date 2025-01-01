@@ -28,14 +28,13 @@
 }
 
 .text-block {
-  max-height: 300xp;
   max-width: 300px;
+  max-height: auto;
 }
 
 .text-block p {
-  font-size: 1.7rem;
-  font-family: Palanquin, Arial;
-  line-height: 150%;
+  font-family: Palanquin, Arial, sans-serif;
+  font-size: 1.7em;
 }
 
 @media (max-width: 489px) {
