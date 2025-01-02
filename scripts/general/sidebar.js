@@ -1,20 +1,26 @@
 import { createLinkEl } from '../../utils/createLink.js';
 import { createSvgEl } from '../../utils/createSvg.js';
-import { toggleSidebar } from '../../utils/toggleSidebar.js';
 
 window.addEventListener('DOMContentLoaded', createSidebar());
 
-document.querySelectorAll('.sidebar-link').forEach(link => {
-  link.addEventListener('click', () => toggleSidebar('none'));
-});
+document.querySelector('.js-x-icon').addEventListener('click', () => hideSidebar());
 
 window.addEventListener('resize', () => {
   if (innerWidth > 565) {
-    toggleSidebar('none');
+    hideSidebar();
   }
 });
 
-document.querySelector('.js-x-icon').addEventListener('click', () => toggleSidebar('none'));
+document.querySelectorAll('.sidebar-link').forEach(link => {
+  link.addEventListener('click', () => hideSidebar());
+});
+
+function hideSidebar() {
+  const sidebar = document.querySelector('.js-sidebar-container');
+
+  sidebar.style.display = 'none';
+  document.body.classList.remove('stop-y-scroll');
+}
 
 function createSidebar() {
   const sidebarEl = document.querySelector('.js-sidebar-container');

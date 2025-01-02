@@ -1,10 +1,16 @@
 import { createLinkEl } from '../../utils/createLink.js';
 import { createSvgEl } from '../../utils/createSvg.js';
-import { toggleSidebar } from '../../utils/toggleSidebar.js';
 
 window.addEventListener('DOMContentLoaded', createNavbar());
 
-document.querySelector('.js-hb-icon').addEventListener('click', () => toggleSidebar('flex'));
+document.querySelector('.js-hb-icon').addEventListener('click', () => showSidebar());
+
+function showSidebar() {
+  const sidebar = document.querySelector('.js-sidebar-container');
+
+  sidebar.style.display = 'flex';
+  document.body.classList.add('stop-y-scroll');
+}
 
 function createNavbar() {
   const headerEl = document.querySelector('header');
