@@ -1,53 +1,50 @@
-.sentence-container {
+main>section:nth-of-type(2) h1,
+main>section:nth-of-type(5) h2,
+main>section:nth-of-type(6) h4 {
   display: flex;
   justify-content: center;
 }
 
-.sentence-container h1 {
+main>section:nth-of-type(2) h1 {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   font-size: 3.5em;
-  margin-top: 240px;
+  margin-top: 3em;
   padding: 0 10px;
 }
 
 @media (min-width: 560px) {
-  .sentence-container h1 {
+  main>section:nth-of-type(2) h1 {
     font-size: 4.5em;
-    margin-top: 260px;
   }
 }
 
 @media (min-width: 730px) {
-  .sentence-container h1 {
+  main>section:nth-of-type(2) h1 {
     font-size: 6em;
-    margin-top: 280px;
   }
 }
 
-.sentence-2 {
+main>section:nth-of-type(5) h2 {
   font-family: Palanquin, Arial, sans-serif;
-  font-size: 2em;
   font-weight: 600;
-  margin-top: 80px;
-  padding: 0 10px;
+  margin-top: 3.2em;
   padding: 0 10px;
 }
 
 @media (min-width: 738px) {
-  .sentence-2 {
+  main>section:nth-of-type(5) h2 {
     font-size: 2.5em;
   }
 }
 
 @media (min-width: 880px) {
-  .sentence-2 {
+  main>section:nth-of-type(5) h2 {
     font-size: 3em;
   }
 }
 
-.sentence-3 {
-  color: var(--gy-mid-clr);
+main>section:nth-of-type(6) h4 {
   font-family: Palanquin, Arial, sans-serif;
-  font-size: 1.4em;
-  margin-top: 200px;
+  color: var(--gy-mid-clr);
+  margin-top: 8em;
 }

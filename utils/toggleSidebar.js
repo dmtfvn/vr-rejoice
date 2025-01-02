@@ -4,10 +4,10 @@ export function toggleSidebar(state) {
   sidebarEl.style.display = state;
 
   if (state === 'flex') {
-    document.body.classList.add('stop-y-scroll');
+    document.body.style.overflowY = 'hidden';
   }
 
   if (state === 'none') {
-    document.body.classList.remove('stop-y-scroll');
+    document.body.style.overflowY = 'auto';
   }
 }

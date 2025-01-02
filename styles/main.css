@@ -19,8 +19,3 @@
 .site-container>main {
   flex-grow: 1;
 }
-
-body.stop-y-scroll {
-  overflow-y: hidden;
-  touch-action: none;
-}
