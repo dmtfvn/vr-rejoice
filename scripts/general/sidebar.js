@@ -1,6 +1,6 @@
-import { createLinkEl } from '../utils/createLink.js';
-import { createSvgEl } from '../utils/createSvg.js';
-import { toggleSidebar } from '../utils/toggleSidebar.js';
+import { createLinkEl } from '../../utils/createLink.js';
+import { createSvgEl } from '../../utils/createSvg.js';
+import { toggleSidebar } from '../../utils/toggleSidebar.js';
 
 window.addEventListener('DOMContentLoaded', createSidebar());
 

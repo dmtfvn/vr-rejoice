@@ -8,86 +8,99 @@
   <link rel="icon" href="icons/panorama-favicon.png">
   <title>Home</title>
 
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="nav/header.css">
-  <link rel="stylesheet" href="nav/sidebar.css">
-  <link rel="stylesheet" href="nav/footer.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/general/header.css">
+  <link rel="stylesheet" href="styles/general/sidebar.css">
+  <link rel="stylesheet" href="styles/general/footer.css">
 
-  <link rel="stylesheet" href="css/home/image-container.css">
-  <link rel="stylesheet" href="css/home/home-sentence-container.css">
-  <link rel="stylesheet" href="css/home/home-box-container.css">
-  <link rel="stylesheet" href="css/home/home-circle-container.css">
+  <link rel="stylesheet" href="styles/home/image-container.css">
+  <link rel="stylesheet" href="styles/home/sentence-container.css">
+  <link rel="stylesheet" href="styles/home/box-container.css">
+  <link rel="stylesheet" href="styles/home/circle-container.css">
 
-  <script src="nav/header.js" type="module"></script>
-  <script src="nav/sidebar.js" type="module"></script>
-  <script src="nav/footer.js" defer></script>
-  <script src="js/home/home-hover.js" defer></script>
+  <script src="scripts/general/header.js" type="module"></script>
+  <script src="scripts/general/sidebar.js" type="module"></script>
+  <script src="scripts/general/footer.js" defer></script>
+  <script src="scripts/home/home-hover.js" defer></script>
 </head>
 
 <body>
   <div class="site-container">
     <header></header>
+
     <nav class="js-sidebar-container"></nav>
+
     <main>
       <section>
         <img src="images/home/mountain-top.png" alt="image of snow covered mountain peak">
-        <h1>
+        <h3>
           "Just picture it, and we'll take you there."
+        </h3>
+      </section>
+
+      <section class="sentence-container">
+        <h1 class="sentence-1">
+          Brace yourself...
         </h1>
       </section>
-      <section class="sentence-container">
-        <p class="sentence-1">
-          Brace yourself...
-        </p>
-      </section>
+
       <section class="box-container">
         <div class="box">
-          <div class="round-square">
+          <section class="round-square">
             <img src="icons/home-png/quality-icon.png" alt="image of guaranteed quality icon">
-          </div>
-          <div class="text-block">
+          </section>
+
+          <section class="text-block">
             <p>
               Remarkable quality surrounds your virtual tour, enhancing your experience, as you dive deeper into the
               chosen module.
             </p>
-          </div>
+          </section>
         </div>
+
         <div class="box">
-          <div class="round-square">
+          <section class="round-square">
             <img src="icons/home-png/vr-headset-icon-pair.png" alt="image of virtual reality headset icon">
-          </div>
-          <div class="text-block">
+          </section>
+
+          <section class="text-block">
             <p>
               Compatible with every VR headset, allowing you to focus more on the presentable software, than the
               required
               hardware.
             </p>
-          </div>
+          </section>
         </div>
       </section>
+
       <section>
         <img src="images/home/immersive-tunnel.png" alt="image of abstract immersive tunnel">
       </section>
+
       <section class="sentence-container">
         <p class="sentence-2">
           "Get ready to experience all imaginable!"
         </p>
       </section>
+
       <section class="sentence-container">
         <p class="sentence-3">
           &#8213; Those are our guaranties &#8213;
         </p>
       </section>
+
       <section class="circle-container">
         <div class="circle-total-width js-circle-total-width">
           <section class="circle js-circle">
             <img class="icon" src="icons/home-svg/sentiment_excited_FILL0_wght400_GRAD0_opsz24.svg">
             <p class="text">thrilling</p>
           </section>
+
           <section class="circle js-circle">
             <img class="icon" src="icons/home-svg/neurology_FILL0_wght400_GRAD0_opsz24.svg">
             <p class="text">memorable</p>
           </section>
+
           <section class="circle js-circle">
             <img class="icon" src="icons/home-svg/user-svgrepo-com.svg">
             <p class="text">personal</p>
@@ -95,6 +108,7 @@
         </div>
       </section>
     </main>
+
     <footer></footer>
   </div>
 </body>
