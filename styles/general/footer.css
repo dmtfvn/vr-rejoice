@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer>p {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--gy-mid-clr);
+  border-top: 1px solid var(--gy-mid-clr);
+  padding: 35px 10px;
+}
+
+footer span {
+  color: hsl(0, 0%, 38%);
+}
