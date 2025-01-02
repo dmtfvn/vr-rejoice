@@ -1,3 +1,4 @@
+import { createLiEl } from '../../utils/createLi.js';
 import { createLinkEl } from '../../utils/createLink.js';
 import { createSvgEl } from '../../utils/createSvg.js';
 import { toggleSidebar } from '../../utils/toggleSidebar.js';
@@ -12,7 +13,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-document.querySelectorAll('.sidebar-link').forEach(link => {
+document.querySelectorAll('.js-sidebar-container a').forEach(link => {
   link.addEventListener('click', () => toggleSidebar('none'));
 });
 
@@ -26,9 +27,13 @@ function createSidebar() {
     createSvgEl('m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z')
   );
 
+  const ulEl = document.createElement('ul');
+
+  ulEl.appendChild(createLiEl(createLinkEl('explore.html', 'Explore')));
+  ulEl.appendChild(createLiEl(createLinkEl('vision.html', 'Vision')));
+  ulEl.appendChild(createLiEl(createLinkEl('faq.html', 'FAQ')));
+  ulEl.appendChild(createLiEl(createLinkEl('manifest.html', 'Manifest')));
+
   sidebarEl.appendChild(closeSbBtn);
-  sidebarEl.appendChild(createLinkEl('explore.html', 'Explore'));
-  sidebarEl.appendChild(createLinkEl('vision.html', 'Vision'));
-  sidebarEl.appendChild(createLinkEl('faq.html', 'FAQ'));
-  sidebarEl.appendChild(createLinkEl('manifest.html', 'Manifest'));
+  sidebarEl.appendChild(ulEl);
 }

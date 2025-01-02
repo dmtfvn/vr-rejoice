@@ -7,8 +7,6 @@ body>nav {
   -webkit-backdrop-filter: blur(10px);
   display: none;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   padding: 13px 10px;
   position: fixed;
   top: 0;
@@ -16,15 +14,26 @@ body>nav {
   z-index: 5;
 }
 
-body>nav>a {
+body>nav>ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body>nav>ul>li {
+  margin-top: 30px;
+  list-style: none;
+}
+
+body>nav>ul a {
   font-size: 1.2em;
   color: var(--gy-clr);
+  padding: 5px;
   text-decoration: none;
-  margin-top: 30px;
+}
 
-  &:last-child {
-    font-weight: 600;
-  }
+body>nav>ul>li:last-of-type a {
+  font-weight: 600;
 }
 
 body>nav>button {
