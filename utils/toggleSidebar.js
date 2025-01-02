@@ -3,11 +3,11 @@ export function toggleSidebar(state) {
 
   sidebarEl.style.display = state;
 
-  if (state === 'flex') {
+  if (sidebarEl.style.display === 'flex') {
     document.body.style.overflowY = 'hidden';
   }
 
-  if (state === 'none') {
+  if (sidebarEl.style.display === 'none') {
     document.body.style.overflowY = 'auto';
   }
 }
