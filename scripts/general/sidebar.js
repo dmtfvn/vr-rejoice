@@ -1,26 +1,20 @@
 import { createLinkEl } from '../../utils/createLink.js';
 import { createSvgEl } from '../../utils/createSvg.js';
+import { toggleSidebar } from '../../utils/toggleSidebar.js';
 
 window.addEventListener('DOMContentLoaded', createSidebar());
 
-document.querySelector('.js-x-icon').addEventListener('click', () => hideSidebar());
+document.querySelector('.js-x-icon').addEventListener('click', () => toggleSidebar('none'));
 
 window.addEventListener('resize', () => {
   if (innerWidth > 565) {
-    hideSidebar();
+    toggleSidebar('none');
   }
 });
 
 document.querySelectorAll('.sidebar-link').forEach(link => {
-  link.addEventListener('click', () => hideSidebar());
+  link.addEventListener('click', () => toggleSidebar('none'));
 });
-
-function hideSidebar() {
-  const sidebar = document.querySelector('.js-sidebar-container');
-
-  sidebar.style.display = 'none';
-  enableScroll();
-}
 
 function createSidebar() {
   const sidebarEl = document.querySelector('.js-sidebar-container');
@@ -33,17 +27,8 @@ function createSidebar() {
   );
 
   sidebarEl.appendChild(closeSbBtn);
-  sidebarEl.appendChild(createLinkEl('sidebar-link', 'explore.html', 'Explore'));
-  sidebarEl.appendChild(createLinkEl('sidebar-link', 'vision.html', 'Vision'));
-  sidebarEl.appendChild(createLinkEl('sidebar-link', 'faq.html', 'FAQ'));
-  sidebarEl.appendChild(createLinkEl('sidebar-link', 'manifest.html', 'Manifest'));
-}
-
-function enableScroll() {
-  document.body.style.overflow = '';
-  document.body.removeEventListener('touchmove', preventDefault, { passive: false });
-}
-
-function preventDefault(e) {
-  e.preventDefault();
+  sidebarEl.appendChild(createLinkEl('explore.html', 'Explore'));
+  sidebarEl.appendChild(createLinkEl('vision.html', 'Vision'));
+  sidebarEl.appendChild(createLinkEl('faq.html', 'FAQ'));
+  sidebarEl.appendChild(createLinkEl('manifest.html', 'Manifest'));
 }

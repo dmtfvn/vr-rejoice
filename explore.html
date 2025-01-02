@@ -8,92 +8,99 @@
   <link rel="icon" href="icons/panorama-favicon.png">
   <title>Explore</title>
 
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="palette.css">
-  <link rel="stylesheet" href="nav/header.css">
-  <link rel="stylesheet" href="nav/sidebar.css">
-  <link rel="stylesheet" href="nav/footer.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/general/header.css">
+  <link rel="stylesheet" href="styles/general/sidebar.css">
+  <link rel="stylesheet" href="styles/general/footer.css">
 
-  <link rel="stylesheet" href="css/explore/explore-sentence-container.css">
-  <link rel="stylesheet" href="css/explore/explore-module-container.css">
+  <link rel="stylesheet" href="styles/explore/explore-sentence-container.css">
+  <link rel="stylesheet" href="styles/explore/explore-module-container.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-
-  <script src="nav/header.js" type="module"></script>
-  <script src="nav/sidebar.js" type="module"></script>
-  <script src="nav/footer.js" defer></script>
-  <script src="js/explore/explore-hover.js" defer></script>
+  <script src="scripts/general/header.js" type="module"></script>
+  <script src="scripts/general/sidebar.js" type="module"></script>
+  <script src="scripts/general/footer.js" defer></script>
+  <script src="scripts/explore/explore-hover.js" defer></script>
 </head>
 
 <body>
-  <header id="header" class="header-container"></header>
-  <nav id="sidebar" class="sidebar-container js-sidebar-container"></nav>
-  <div class="sentence-container">
-    <div class="sentence-grid">
-      <p class="sentence-1">
-        Various assortment.
-      </p>
-      <p class="sentence-2">
-        Equal effectiveness.
-      </p>
-      <p class="sentence-3">
-        Complete fulfillment.
-      </p>
+  <header></header>
+
+  <nav class="js-sidebar-container"></nav>
+
+  <main>
+    <section class="sentence-container">
+      <div class="sentence-grid">
+        <p class="sentence-1">
+          Various assortment.
+        </p>
+        <p class="sentence-2">
+          Equal effectiveness.
+        </p>
+        <p class="sentence-3">
+          Complete fulfillment.
+        </p>
+      </div>
+    </section>
+
+    <div class="module-container">
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/canyon.png" alt="image of Grand Canyon">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/petra.png" alt="image of Petra City">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/sahara.png" alt="image of Sahara Desert">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/mayan.png" alt="image of Mayan Pyramids">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/amazonia.png" alt="image of Amazonia River">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/k2.png" alt="image of K2 Mountain">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/africa.png" alt="image of South Africa">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/antarctica.png" alt="image of North Pole">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/arenal.png" alt="image of Arenal Volcano">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/detian.png" alt="image of Detian Falls">
+        <p class="module-text js-module-text"></p>
+      </section>
+
+      <section class="module js-module">
+        <img class="module-image" src="images/explore/devetashka.png" alt="image of Devetashka Cave">
+        <p class="module-text js-module-text"></p>
+      </section>
     </div>
-  </div>
-  <div class="module-container">
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/canyon.png" alt="image of Grand Canyon">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/petra.png" alt="image of Petra City">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/sahara.png" alt="image of Sahara Desert">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/mayan.png" alt="image of Mayan Pyramids">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/amazonia.png" alt="image of Amazonia River">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/k2.png" alt="image of K2 Mountain">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/africa.png" alt="image of South Africa">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/antarctica.png" alt="image of North Pole">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/arenal.png" alt="image of Arenal Volcano">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/detian.png" alt="image of Detian Falls">
-      <p class="module-text js-module-text"></p>
-    </div>
-    <div class="module js-module">
-      <img class="module-image" src="images/explore/devetashka.png" alt="image of Devetashka Cave">
-      <p class="module-text js-module-text"></p>
-    </div>
-  </div>
-  <footer id="footer" class="footer-container"></footer>
+  </main>
+
+  <footer></footer>
 </body>
 
 </html>

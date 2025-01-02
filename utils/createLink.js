@@ -1,6 +1,5 @@
-export function createLinkEl(classAttr, hypLink, content) {
+export function createLinkEl(hypLink, content) {
   const aTag = document.createElement('a');
-  aTag.className = classAttr;
   aTag.href = hypLink;
 
   if (content) {

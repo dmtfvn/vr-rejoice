@@ -16,7 +16,7 @@ body>nav {
   z-index: 5;
 }
 
-.sidebar-link {
+body>nav>a {
   font-size: 1.2em;
   color: var(--gy-clr);
   text-decoration: none;

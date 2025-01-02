@@ -1,23 +1,20 @@
+import { createLiEl } from '../../utils/createLi.js';
 import { createLinkEl } from '../../utils/createLink.js';
 import { createSvgEl } from '../../utils/createSvg.js';
+import { toggleSidebar } from '../../utils/toggleSidebar.js';
 
 window.addEventListener('DOMContentLoaded', createNavbar());
 
-document.querySelector('.js-hb-icon').addEventListener('click', () => showSidebar());
-
-function showSidebar() {
-  const sidebar = document.querySelector('.js-sidebar-container');
-
-  sidebar.style.display = 'flex';
-  disableScroll();
-}
+document.querySelector('.js-hb-icon').addEventListener('click', () => toggleSidebar('flex'));
 
 function createNavbar() {
   const headerEl = document.querySelector('header');
 
   const navEl = document.createElement('nav');
 
-  const logoEl = createLinkEl('logo-container', 'index.html');
+  const ulEl = document.createElement('ul');
+
+  const logoEl = createLinkEl('index.html');
 
   const imgEl = document.createElement('img');
   imgEl.src = 'logo/logo.png';
@@ -32,21 +29,14 @@ function createNavbar() {
     createSvgEl('M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z')
   );
 
-  navEl.appendChild(logoEl);
-  navEl.appendChild(createLinkEl('header-link', 'explore.html', 'Explore'));
-  navEl.appendChild(createLinkEl('header-link', 'vision.html', 'Vision'));
-  navEl.appendChild(createLinkEl('header-link', 'faq.html', 'FAQ'));
-  navEl.appendChild(createLinkEl('header-link', 'manifest.html', 'Manifest'));
+  ulEl.appendChild(createLiEl(logoEl));
+  ulEl.appendChild(createLiEl(createLinkEl('explore.html', 'Explore')));
+  ulEl.appendChild(createLiEl(createLinkEl('vision.html', 'Vision')));
+  ulEl.appendChild(createLiEl(createLinkEl('faq.html', 'FAQ')));
+  ulEl.appendChild(createLiEl(createLinkEl('manifest.html', 'Manifest')));
+
+  navEl.appendChild(ulEl);
 
   headerEl.appendChild(navEl);
   headerEl.appendChild(openSbBtn);
-}
-
-function disableScroll() {
-  document.body.style.overflow = 'hidden';
-  document.body.addEventListener('touchmove', preventDefault, { passive: false });
-}
-
-function preventDefault(e) {
-  e.preventDefault();
 }
