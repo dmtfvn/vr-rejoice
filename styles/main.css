@@ -3,7 +3,7 @@
 @import url('./reset.css');
 @import url('./typography.css');
 
-.site-container {
+body {
   background-color: var(--yt-ish-clr);
   font: inherit;
   color: var(--bk-ish-clr);
@@ -16,7 +16,7 @@
   cursor: default;
 }
 
-.site-container>main {
+body>main {
   flex-grow: 1;
 }
 
