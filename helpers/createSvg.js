@@ -1,4 +1,4 @@
-export function createSvgEl(path) {
+export function createSvgEl(pathString) {
   const svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svgIcon.setAttribute('width', '24px');
   svgIcon.setAttribute('height', '24px');
@@ -7,7 +7,7 @@ export function createSvgEl(path) {
   const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   svgPath.setAttribute(
     'd',
-    `${path}`
+    `${pathString}`
   );
 
   svgIcon.appendChild(svgPath);
