@@ -13,12 +13,12 @@ window.addEventListener('resize', () => {
   }
 });
 
-document.querySelectorAll('.js-sidebar-container a').forEach(link => {
+document.querySelectorAll('aside a').forEach(link => {
   link.addEventListener('click', () => toggleSidebar('none'));
 });
 
 function createSidebar() {
-  const sidebarEl = document.querySelector('.js-sidebar-container');
+  const sidebarEl = document.querySelector('aside');
 
   const closeSbBtn = document.createElement('button');
   closeSbBtn.classList.add('js-x-icon');
@@ -27,6 +27,8 @@ function createSidebar() {
     createSvgEl('m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z')
   );
 
+  const navEl = document.createElement('nav');
+
   const ulEl = document.createElement('ul');
 
   ulEl.appendChild(createLiEl(createLinkEl('explore.html', 'Explore')));
@@ -34,6 +36,8 @@ function createSidebar() {
   ulEl.appendChild(createLiEl(createLinkEl('faq.html', 'FAQ')));
   ulEl.appendChild(createLiEl(createLinkEl('manifest.html', 'Manifest')));
 
+  navEl.appendChild(ulEl);
+
   sidebarEl.appendChild(closeSbBtn);
-  sidebarEl.appendChild(ulEl);
+  sidebarEl.appendChild(navEl);
 }

@@ -1,4 +1,4 @@
-body>nav {
+body>aside {
   background-color: hsla(0, 100%, 100%, 0.85);
   box-shadow: -5px 0 10px hsla(0, 100%, 0%, 0.07);
   width: 100%;
@@ -14,29 +14,29 @@ body>nav {
   z-index: 5;
 }
 
-body>nav>ul {
+body>aside>nav>ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-body>nav>ul>li {
+body>aside>nav>ul>li {
   margin-top: 30px;
   list-style: none;
 }
 
-body>nav>ul a {
+body>aside>nav>ul a {
   font-size: 1.2em;
   color: var(--gy-clr);
   padding: 5px;
   text-decoration: none;
 }
 
-body>nav>ul>li:last-of-type a {
+body>aside>nav>ul>li:last-of-type a {
   font-weight: 600;
 }
 
-body>nav>button {
+body>aside>button {
   display: flex;
   background: none;
   border: none;
@@ -45,7 +45,7 @@ body>nav>button {
 }
 
 @media (min-width: 350px) {
-  body>nav {
+  body>aside {
     width: 250px;
   }
 }
