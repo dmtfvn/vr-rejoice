@@ -7,7 +7,7 @@
 }
 
 .box-container>div {
-  background-color: var(--gy-ish-clr);
+  background-color: hsl(240, 50%, 90%);
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 2;
