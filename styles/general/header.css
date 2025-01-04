@@ -5,6 +5,7 @@ header {
   height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 8px 15px;
   position: fixed;
   top: 0;
@@ -15,7 +16,6 @@ header {
 
 header>button {
   display: flex;
-  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
@@ -28,7 +28,7 @@ header>nav {
 header>nav>ul {
   display: flex;
   justify-content: space-between;
-  flex-grow: 1;
+  align-items: center;
 }
 
 header>nav>ul>li {
@@ -36,10 +36,10 @@ header>nav>ul>li {
   list-style: none;
 }
 
-header>nav>ul a {
-  font-size: 0.85rem;
-  color: var(--gy-clr);
+header>nav>ul>li>a {
   font-family: inherit;
+  color: var(--gy-clr);
+  font-size: 0.85rem;
   text-decoration: none;
   padding: 5px;
   cursor: pointer;
