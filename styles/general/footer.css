@@ -8,6 +8,7 @@ footer>p {
   font-weight: 600;
   border-top: 1px solid var(--gy-mid-clr);
   padding: 35px 15px;
+  text-align: center;
 }
 
 footer span {

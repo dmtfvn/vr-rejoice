@@ -1,65 +1,49 @@
-const image = document.querySelectorAll('.js-future-module-image');
-const title = document.querySelectorAll('.js-future-module-title');
-const line = document.querySelectorAll('.js-future-module-line');
-const text = document.querySelectorAll('.js-future-module-text');
+const img1 = document.querySelector('.js-future-1>img');
+const title1 = document.querySelector('.js-future-1>h6');
+const text1 = document.querySelector('.js-future-1>p');
 
-const btn = document.querySelectorAll('.js-btn-toggle');
-
-const darkGray = 'hsl(0, 3%, 60%)';
-const lightGray = 'hsl(0, 7%, 80%)';
+const img2 = document.querySelector('.js-future-2>img');
+const title2 = document.querySelector('.js-future-2>h6');
+const text2 = document.querySelector('.js-future-2>p');
 
 const fullOpac = 1;
 const lessOpac = 0.2;
 const zeroOpac = 0;
 
-function displayMore(img, title, sprt, txt) {
+document.querySelector('.future-container').addEventListener('change', (e) => {
+  if (e.target.id === 'switch-1-content') {
+    displayMore(img1, title1, text1);
+  }
+
+  if (e.target.id === 'switch-1-blank') {
+    displayLess(img1, title1, text1);
+  }
+
+  if (e.target.id === 'switch-2-content') {
+    displayMore(img2, title2, text2);
+  }
+
+  if (e.target.id === 'switch-2-blank') {
+    displayLess(img2, title2, text2);
+  }
+});
+
+function displayMore(img, title, text) {
   img.style.opacity = lessOpac;
   img.style.transition = 'opacity 0.5s ease-out';
 
   title.style.opacity = fullOpac;
 
-  sprt.style.opacity = fullOpac;
-  sprt.style.transition = 'opacity 1s ease-in-out';
-  sprt.style.transitionDelay = '1s';
-
-  txt.style.opacity = fullOpac;
-  txt.style.transition = 'opacity 1.5s ease-in-out';
-  txt.style.transitionDelay = '2s';
+  text.style.opacity = fullOpac;
+  text.style.transition = 'opacity 1.5s ease-in-out';
+  text.style.transitionDelay = '0.8s';
 }
 
-function displayLess(img, title, sprt, txt) {
+function displayLess(img, title, text) {
   img.style.opacity = fullOpac;
 
   title.style.opacity = zeroOpac;
 
-  sprt.style.opacity = zeroOpac;
-  sprt.style.transition = 'none';
-
-  txt.style.opacity = zeroOpac;
-  txt.style.transition = 'none';
+  text.style.opacity = zeroOpac;
+  text.style.transition = 'none';
 }
-
-function swapColor(btnLeft, btnRight) {
-  btnLeft.style.backgroundColor = darkGray;
-  btnRight.style.backgroundColor = lightGray;
-}
-
-btn[1].addEventListener('click', function () {
-  displayMore(image[0], title[0], line[0], text[0]);
-  swapColor(btn[1], btn[0]);
-});
-
-btn[0].addEventListener('click', function () {
-  displayLess(image[0], title[0], line[0], text[0]);
-  swapColor(btn[0], btn[1]);
-});
-
-btn[3].addEventListener('click', function () {
-  displayMore(image[1], title[1], line[1], text[1]);
-  swapColor(btn[3], btn[2]);
-});
-
-btn[2].addEventListener('click', function () {
-  displayLess(image[1], title[1], line[1], text[1]);
-  swapColor(btn[2], btn[3]);
-});

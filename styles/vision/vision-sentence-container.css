@@ -1,23 +1,21 @@
-.sentence-container {
+main>section:nth-of-type(2),
+main>section:nth-of-type(4) {
   background-color: var(--yt-clr);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 25px 15px;
+  gap: 50px;
 }
 
-.sentence-1 {
+main>section:nth-of-type(2) h3,
+main>section:nth-of-type(2) h5 {
   color: var(--gy-mid-clr);
-  font-size: 1.5rem;
   font-weight: 700;
 }
 
-.sentence-2 {
-  font-size: 1.2rem;
-}
-
-.sentence-1,
-.sentence-2 {
-  font-family: Palanquin, Arial;
-  padding: 25px;
+main>section:nth-of-type(2) h3,
+main>section:nth-of-type(2) h5,
+main>section:nth-of-type(4) h6 {
+  font-family: Palanquin, Arial, sans-serif;
+  text-align: center;
 }

@@ -11,19 +11,19 @@
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 2;
-  text-align: center;
   padding: 15px;
 }
 
 .box-container img {
   max-width: 200px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
 }
 
 .box-container p {
   font-family: Palanquin, Arial, sans-serif;
   font-size: 1.2em;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
