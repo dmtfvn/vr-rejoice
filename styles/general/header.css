@@ -1,7 +1,6 @@
 header {
   background-color: hsla(240, 20%, 97%, 0.90);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   height: 50px;
   display: flex;
   justify-content: center;
