@@ -15,7 +15,7 @@
 
 .future-container>div>section {
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 4fr 1fr 4fr;
   grid-template-columns: 1fr 4fr 1fr;
   order: -1;
 }
@@ -30,18 +30,26 @@
 .future-container section>p {
   opacity: 0;
   text-align: center;
-  grid-area: 2 / 2 / 3 / 3;
+  z-index: 30;
+}
+
+.future-container section>h6 {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: flex-end;
+}
+
+.future-container section>p {
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: flex-start;
 }
 
 .future-container section>h6 {
   color: var(--bk-clr);
   font-weight: 700;
-  padding-top: 20px;
 }
 
 .future-container section>p {
   color: var(--gy-clr);
-  padding-top: 70px;
 }
 
 .future-container input {
@@ -100,12 +108,7 @@
 
 @media (min-width: 320px) {
   .future-container section>h6 {
-    padding-top: 35px;
     font-size: 1.7em;
-  }
-
-  .future-container section>p {
-    padding-top: 120px;
   }
 }
 
