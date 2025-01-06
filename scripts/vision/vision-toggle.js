@@ -10,7 +10,7 @@ const fullOpac = 1;
 const lessOpac = 0.2;
 const zeroOpac = 0;
 
-document.querySelector('.future-container').addEventListener('change', (e) => {
+document.querySelector('.js-future-container').addEventListener('change', (e) => {
   if (e.target.id === 'switch-1-content') {
     displayMore(img1, title1, text1);
   }
@@ -30,12 +30,12 @@ document.querySelector('.future-container').addEventListener('change', (e) => {
 
 function displayMore(img, title, text) {
   img.style.opacity = lessOpac;
-  img.style.transition = 'opacity 0.5s ease-out';
+  img.style.transition = 'opacity 0.5s ease';
 
   title.style.opacity = fullOpac;
 
   text.style.opacity = fullOpac;
-  text.style.transition = 'opacity 1.5s ease-in-out';
+  text.style.transition = 'opacity 1.5s ease';
   text.style.transitionDelay = '0.8s';
 }
 
