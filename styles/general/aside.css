@@ -10,7 +10,7 @@ body>aside {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 20;
+  z-index: 30;
 }
 
 body>aside>nav>ul {

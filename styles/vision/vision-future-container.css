@@ -30,7 +30,7 @@
 .future-container section>p {
   opacity: 0;
   text-align: center;
-  z-index: 30;
+  z-index: 10;
 }
 
 .future-container section>h6 {
