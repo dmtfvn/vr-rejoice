@@ -13,6 +13,10 @@ main>section:nth-of-type(2) h5 {
   font-weight: 700;
 }
 
+main>section:nth-of-type(4) h6 {
+  font-size: 1em;
+}
+
 main>section:nth-of-type(2) h3,
 main>section:nth-of-type(2) h5,
 main>section:nth-of-type(4) h6 {
