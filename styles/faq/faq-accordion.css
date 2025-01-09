@@ -28,8 +28,8 @@ main>section:nth-of-type(3)>div details>summary {
   -webkit-tap-highlight-color: transparent;
 }
 
-main>section:nth-of-type(3)>div details>p {
-  padding-top: 20px;
+details>summary::-webkit-details-marker {
+  display: none;
 }
 
 main>section:nth-of-type(3)>div details>summary {
@@ -38,6 +38,10 @@ main>section:nth-of-type(3)>div details>summary {
   font-family: Palanquin, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+main>section:nth-of-type(3)>div details>p {
+  padding-top: 20px;
 }
 
 .arrow {
