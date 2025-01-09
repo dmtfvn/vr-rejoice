@@ -61,6 +61,7 @@
 .dialog>form>div>textarea+label {
   display: flex;
   color: var(--gy-clr);
+  padding-left: 15px;
   order: -1;
 }
 
