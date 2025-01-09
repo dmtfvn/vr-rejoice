@@ -18,18 +18,15 @@ main>section:nth-of-type(3)>div details {
   padding: 15px;
   border-radius: 16px;
   overflow: hidden;
-}
+  -webkit-tap-highlight-color: transparent;
 
-main>section:nth-of-type(3)>div details:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 main>section:nth-of-type(3)>div details>p {
   padding-top: 20px;
-}
-
-main>section:nth-of-type(3)>div details>summary::-webkit-details-marker {
-  display: none;
 }
 
 summary {
