@@ -35,7 +35,6 @@
 .dialog>form>div:not(:last-of-type) {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
 }
 
 .dialog>form>div>textarea {
@@ -44,7 +43,8 @@
 }
 
 .dialog>form>div>input[type="text"],
-.dialog>form>div>textarea {
+.dialog>form>div>textarea,
+.dialog>form>div>input[type="email"] {
   padding: 20px;
   outline: none;
   border-radius: 5px;
@@ -52,13 +52,15 @@
 }
 
 .dialog>form>div>input[type="text"]:focus,
-.dialog>form>div>textarea:focus {
+.dialog>form>div>textarea:focus,
+.dialog>form>div>input[type="email"]:focus {
   border-color: var(--gd-drk-clr);
   box-shadow: 0 0 8px var(--gd-drk-clr);
 }
 
 .dialog>form>div>input[type="text"]+label,
-.dialog>form>div>textarea+label {
+.dialog>form>div>textarea+label,
+.dialog>form>div>input[type="email"]+label {
   display: flex;
   color: var(--gy-clr);
   padding-left: 15px;
@@ -66,7 +68,8 @@
 }
 
 .dialog>form>div>input[type="text"]+label::after,
-.dialog>form>div>textarea+label::after {
+.dialog>form>div>textarea+label::after,
+.dialog>form>div>input[type="email"]+label::after {
   display: flex;
   content: '\f149';
   font-family: 'Font Awesome 6 Free';
@@ -96,7 +99,8 @@
 }
 
 .dialog>form>div>p {
+  height: 70px;
   color: var(--gd-drk-clr);
-  padding-top: 8px;
+  padding-top: 10px;
   text-align: center;
 }

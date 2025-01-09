@@ -22,7 +22,7 @@ main>section:nth-of-type(4) h4 {
 main>section:nth-of-type(2) h1 {
   font-family: 'Anek Devanagari', Arial, sans-serif;
   color: hsl(0, 3.5%, 70.5%);
-  padding: 45px 0 15px 0;
+  padding: 50px 0 25px 0;
 }
 
 main>section:nth-of-type(4) input {

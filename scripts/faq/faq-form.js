@@ -23,6 +23,10 @@ function eraseDataAndMsg() {
 
 openForm.addEventListener('click', function () {
   dialog.showModal();
+
+  inputName.value = '';
+  inputQuery.value = '';
+  inputEmail.value = '';
 });
 
 closeForm.addEventListener('click', function () {
@@ -65,20 +69,24 @@ function checkForValidEmail(email) {
   return /(?:^|(?<=\s))(?:[a-z0-9]{2,}|[a-z]+\.?[a-z0-9]+)(?:[_\-\.]?)(?:[a-z0-9]*)@(?:[a-z]{2,}|[a-z]+[0-9]+|[0-9]+[a-z]+|[0-9]+\-[a-z]+)(?:[0-9]*)(?:[\-\.]?)(?:[a-z0-9]*)\.(?:[a-z]{2}|com|net|org)(?:$|(?=\s))/.test(email);
 }
 
-form.addEventListener('click', function (e) {
+function handleSubmit(e) {
   const isEmailValid = checkForValidEmail(curEmail);
 
-  if (curUser === '' || curUser.length !== 0 && curUser.length < 2) {
+  const data = new FormData(e.target);
+
+  const formData = Object.fromEntries(data);
+
+  if (formData.name === '' || formData.name.length !== 0 && curUser.length < 2) {
     e.preventDefault();
 
     errorMsgName.textContent = 'Name must be longer than 1 character';
     inputName.focus();
-  } else if (curQuery === '' || curQuery.length !== 0 && curQuery.length <= 30) {
+  } else if (formData.query === '' || formData.query.length !== 0 && curQuery.length <= 30) {
     e.preventDefault();
 
     errorMsgQuery.textContent = 'Question must be longer than 30 characters';
     inputQuery.focus();
-  } else if (curEmail === '' || curEmail.length !== 0 && curEmail.length <= 7) {
+  } else if (formData.email === '' || formData.email.length !== 0 && curEmail.length <= 7) {
     e.preventDefault();
 
     errorMsgEmail.textContent = 'Email must be longer than 7 characters';
@@ -89,4 +97,6 @@ form.addEventListener('click', function (e) {
     errorMsgEmail.textContent = 'This email is not valid';
     inputEmail.focus();
   }
-});
+}
+
+form.addEventListener('submit', handleSubmit);
