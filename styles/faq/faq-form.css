@@ -27,6 +27,7 @@
 }
 
 .dialog>form>h4 {
+  font-weight: 500;
   color: var(--gy-clr);
   text-align: center;
   margin-bottom: 60px;
@@ -62,6 +63,7 @@
 .dialog>form>div>textarea+label,
 .dialog>form>div>input[type="email"]+label {
   display: flex;
+  font-weight: 500;
   color: var(--gy-clr);
   padding-left: 15px;
   order: -1;

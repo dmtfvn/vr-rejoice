@@ -96,6 +96,8 @@ function handleSubmit(e) {
 
     errorMsgEmail.textContent = 'This email is not valid';
     inputEmail.focus();
+  } else {
+    dialog.close();
   }
 }
 
