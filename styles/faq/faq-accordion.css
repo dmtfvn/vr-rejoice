@@ -18,7 +18,6 @@ main>section:nth-of-type(3)>div details {
   padding: 15px;
   border-radius: 16px;
   overflow: hidden;
-  -webkit-tap-highlight-color: transparent;
 
   &:last-child {
     margin-bottom: 0;
@@ -29,13 +28,13 @@ main>section:nth-of-type(3)>div details>p {
   padding-top: 20px;
 }
 
-summary {
+main>section:nth-of-type(3)>div details>summary {
   display: flex;
   justify-content: space-between;
-  font-family: Palanquin, Arial;
+  font-family: Palanquin, Arial, sans-serif;
   font-size: 1.5rem;
-  line-height: 1.6;
   font-weight: 700;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .arrow {
