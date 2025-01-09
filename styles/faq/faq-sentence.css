@@ -1,35 +1,33 @@
-.sentence-container {
-  background-color: var(--yt-clr);
+main>section:nth-of-type(1),
+main>section:nth-of-type(2),
+main>section:nth-of-type(4) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sentence-container p {
+main>section:nth-of-type(1),
+main>section:nth-of-type(4) {
+  background-color: var(--yt-clr);
+}
+
+main>section:nth-of-type(1) h4,
+main>section:nth-of-type(4) h4 {
+  font-family: Palanquin, Arial, sans-serif;
   color: var(--gy-mid-clr);
-  font-family: Palanquin, Arial;
-  font-size: 1.5rem;
   font-weight: 500;
   padding: 25px 15px;
 }
 
-.faq-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.faq-title p {
+main>section:nth-of-type(2) h1 {
+  font-family: 'Anek Devanagari', Arial, sans-serif;
   color: hsl(0, 3.5%, 70.5%);
-  font-family: Anek Devanagari, Arial;
-  font-size: 3.5rem;
-  padding: 45px 0 15px;
+  padding: 45px 0 15px 0;
 }
 
-.open-form {
+main>section:nth-of-type(4) h4>input {
   color: var(--gd-drk-clr);
   background: none;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
 }

@@ -8,217 +8,198 @@
   <link rel="icon" href="icons/panorama-favicon.png">
   <title>FAQ</title>
 
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="palette.css">
-  <link rel="stylesheet" href="nav/header.css">
-  <link rel="stylesheet" href="nav/sidebar.css">
-  <link rel="stylesheet" href="nav/footer.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/general/header.css">
+  <link rel="stylesheet" href="styles/general/aside.css">
+  <link rel="stylesheet" href="styles/general/footer.css">
 
-  <link rel="stylesheet" href="css/faq/faq-sentence.css">
-  <link rel="stylesheet" href="css/faq/faq-accordion.css">
-  <link rel="stylesheet" href="css/faq/faq-form.css">
+  <link rel="stylesheet" href="styles/faq/faq-sentence.css">
+  <link rel="stylesheet" href="styles/faq/faq-accordion.css">
+  <link rel="stylesheet" href="styles/faq/faq-form.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="scripts/general/header.js" type="module"></script>
+  <script src="scripts/general/aside.js" type="module"></script>
+  <script src="scripts/general/footer.js" defer></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
-
-  <script src="nav/header.js" type="module"></script>
-  <script src="nav/sidebar.js" type="module"></script>
-  <script src="nav/footer.js" defer></script>
-  <script src="js/faq/faq-form.js" defer></script>
+  <script src="scripts/faq/faq-form.js" defer></script>
 </head>
 
 <body>
-  <header id="header" class="header-container"></header>
-  <nav id="sidebar" class="sidebar-container js-sidebar-container"></nav>
-  <div class="sentence-container">
-    <p>
-      Have a query? You can check the Frequently Asked Questions.
-    </p>
-  </div>
-  <div class="faq-title">
-    <p>
-      &#9695;FAQ&#9694;
-    </p>
-  </div>
-  <div class="faq-container">
-    <div class="accordion">
-      <details>
-        <summary>
-          What is rejoice?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          Rejoice is a company, specializing in the field of VR software development.
-        </p>
-      </details>
+  <header></header>
 
-      <details>
-        <summary>
-          What are the product types?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          The company offers many different modules. Each contains a realistic, visual representation.
-        </p>
-      </details>
+  <aside></aside>
 
-      <details>
-        <summary>
-          What is a module?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          A module is a dedicated proprietary software, specially build for delivering an exclusive ocular enjoyment.
-        </p>
-      </details>
+  <main>
+    <section>
+      <h4>Have a query? You can check the Frequently Asked Questions.</h4>
+    </section>
 
-      <details>
-        <summary>
-          How does it work?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          Every module can be seamlessly initiated, after being integrated with a VR headset. A step-by-step guide is included in all our products.
-        </p>
-      </details>
+    <section>
+      <h1>&#9695;FAQ&#9694;</h1>
+    </section>
 
-      <details>
-        <summary>
-          I want to be assured of the quality of a particular module. Can I have a demo?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          Certainly. Although the significantly short duration, the fidelity is exactly the same.
-        </p>
-      </details>
+    <section>
+      <div>
+        <details>
+          <summary>
+            What is rejoice?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>Rejoice is a company, specializing in the field of VR software development.</p>
+        </details>
 
-      <details>
-        <summary>
-          Do I need a wi-fi connection to start a module?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          There is no such restriction. A connection to the internet is required only for the download itself.
-        </p>
-      </details>
+        <details>
+          <summary>
+            What are the product types?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>The company offers many different modules. Each contains a realistic, visual representation.</p>
+        </details>
 
-      <details>
-        <summary>
-          Can I share my module?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          Modules are bound with your personal email address, and this link can't be undone.
-        </p>
-      </details>
+        <details>
+          <summary>
+            What is a module?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>A module is a dedicated proprietary software, specially build for delivering an exclusive ocular enjoyment.
+          </p>
+        </details>
 
-      <details>
-        <summary>
-          How can I make a request?
-          <div class="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-            </svg>
-          </div>
-        </summary>
-        <p>
-          All modules are named. The name can be viewed by a simple hover. After sending us the name/names to my_vr_choice@rejoice.io, you will receive your collect path.
-        </p>
-      </details>
-    </div>
-  </div>
-  <div class="sentence-container">
-    <p>
-      Haven't found an answer? Feel free to reach us by filling the 
-      <span><button class="open-form js-open-form">form</button></span>.
-    </p>
-  </div>
+        <details>
+          <summary>
+            How does it work?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>Every module can be seamlessly initiated, after being integrated with a VR headset. A step-by-step guide is
+            included in all our products.</p>
+        </details>
+
+        <details>
+          <summary>
+            I want to be assured of the quality of a particular module. Can I have a demo?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>Certainly. Although the significantly short duration, the fidelity is exactly the same.</p>
+        </details>
+
+        <details>
+          <summary>
+            Do I need a wi-fi connection to start a module?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>There is no such restriction. A connection to the internet is required only for the download itself.</p>
+        </details>
+
+        <details>
+          <summary>
+            Can I share my module?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>Modules are bound with your personal email address, and this link can't be undone.</p>
+        </details>
+
+        <details>
+          <summary>
+            How can I make a request?
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+          </summary>
+          <p>All modules are named. The name can be viewed by a simple hover. After sending us the name/names to
+            my_vr_choice@rejoice.io, you will receive your collect path.</p>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h4>Haven't found an answer? Feel free to reach us by filling the <input class="js-open-form" type="button"
+          value="form"></h4>
+    </section>
+
     <dialog class="dialog">
       <form id="form">
-        <h3>
-          Fill the fields below
-        </h3>
+        <h3>Fill the fields below</h3>
         <div class="input-row">
           <div class="label-svg-container">
             <label for="name">Your name</label>
             <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C"
+                stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </div>
           <input id="name" type="text" name="name" maxlength="40" autocomplete="off">
           <p class="error-msg js-error-msg-name"></p>
         </div>
+
         <div class="input-area">
           <div class="label-svg-container">
             <label for="query">Your question</label>
             <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C"
+                stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </div>
           <textarea id="query" type="text" name="query" maxlength="400"></textarea>
           <p class="error-msg js-error-msg-query"></p>
         </div>
+
         <div class="input-row">
           <div class="label-svg-container">
             <label for="email">Your email</label>
             <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C"
+                stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </div>
           <input id="email" type="text" name="email" maxlength="80" autocomplete="off">
           <p class="error-msg js-error-msg-email"></p>
         </div>
+
         <div class="form-btn-container">
-          <button class="form-btn js-cancel-form" type="button">
-            Cancel
-          </button>
-          <button class="form-btn" type="submit">
-            Submit
-          </button>
+          <button class="form-btn js-cancel-form" type="button">Cancel</button>
+          <button class="form-btn" type="submit">Submit</button>
         </div>
       </form>
     </dialog>
-  <footer id="footer" class="footer-container"></footer>
+  </main>
+
+  <footer></footer>
 </body>
 
 </html>
