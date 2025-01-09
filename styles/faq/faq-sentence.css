@@ -14,8 +14,8 @@ main>section:nth-of-type(4) {
 main>section:nth-of-type(1) h4,
 main>section:nth-of-type(4) h4 {
   font-family: Palanquin, Arial, sans-serif;
-  color: var(--gy-mid-clr);
   font-weight: 500;
+  color: var(--gy-mid-clr);
   padding: 25px 15px;
 }
 
@@ -25,9 +25,9 @@ main>section:nth-of-type(2) h1 {
   padding: 45px 0 15px 0;
 }
 
-main>section:nth-of-type(4) h4>input {
-  color: var(--gd-drk-clr);
+main>section:nth-of-type(4) input {
   background: none;
+  color: var(--gd-drk-clr);
   border: none;
   cursor: pointer;
 }

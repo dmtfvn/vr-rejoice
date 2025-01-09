@@ -35,9 +35,9 @@
 }
 
 .circle-container section>p {
-  color: hsl(20, 40%, 60%);
   font-size: 1.6em;
   font-weight: 700;
+  color: hsl(20, 40%, 60%);
   position: absolute;
   display: none;
 }

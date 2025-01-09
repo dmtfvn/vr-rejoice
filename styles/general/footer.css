@@ -4,8 +4,8 @@ footer {
 }
 
 footer>p {
-  color: var(--gy-mid-clr);
   font-weight: 600;
+  color: var(--gy-mid-clr);
   border-top: 1px solid var(--gy-mid-clr);
   padding: 35px 15px;
   text-align: center;

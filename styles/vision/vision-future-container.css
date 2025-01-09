@@ -44,8 +44,8 @@
 }
 
 .future-container section>h6 {
-  color: var(--bk-clr);
   font-weight: 700;
+  color: var(--bk-clr);
 }
 
 .future-container section>p {

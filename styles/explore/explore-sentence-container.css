@@ -14,8 +14,8 @@ main>section>div {
 
 main>section>div>h3 {
   font-family: Unbounded, Arial, sans-serif;
-  color: var(--gy-mid-clr);
   font-weight: 500;
+  color: var(--gy-mid-clr);
   padding: 25px 0;
 }
 

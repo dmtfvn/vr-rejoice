@@ -1,9 +1,8 @@
-const dialog = document.querySelector('.dialog');
-
 const openForm = document.querySelector('.js-open-form');
 const closeForm = document.querySelector('.js-cancel-form');
 
-const form = document.querySelector('#form');
+const dialog = document.querySelector('.dialog');
+const form = document.querySelector('form');
 
 const inputName = document.querySelector('#name');
 const inputQuery = document.querySelector('#query');
@@ -66,7 +65,7 @@ function checkForValidEmail(email) {
   return /(?:^|(?<=\s))(?:[a-z0-9]{2,}|[a-z]+\.?[a-z0-9]+)(?:[_\-\.]?)(?:[a-z0-9]*)@(?:[a-z]{2,}|[a-z]+[0-9]+|[0-9]+[a-z]+|[0-9]+\-[a-z]+)(?:[0-9]*)(?:[\-\.]?)(?:[a-z0-9]*)\.(?:[a-z]{2}|com|net|org)(?:$|(?=\s))/.test(email);
 }
 
-form.addEventListener('submit', function (e) {
+document.querySelector('.js-submit-form').addEventListener('click', function (e) {
   const isEmailValid = checkForValidEmail(curEmail);
 
   if (curUser === '' || curUser.length !== 0 && curUser.length < 2) {

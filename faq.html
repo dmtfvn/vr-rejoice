@@ -41,102 +41,46 @@
     <section>
       <div>
         <details>
-          <summary>
-            What is rejoice?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>What is rejoice?</summary>
           <p>Rejoice is a company, specializing in the field of VR software development.</p>
         </details>
 
         <details>
-          <summary>
-            What are the product types?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>What are the product types?</summary>
           <p>The company offers many different modules. Each contains a realistic, visual representation.</p>
         </details>
 
         <details>
-          <summary>
-            What is a module?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>What is a module?</summary>
           <p>A module is a dedicated proprietary software, specially build for delivering an exclusive ocular enjoyment.
           </p>
         </details>
 
         <details>
-          <summary>
-            How does it work?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>How does it work?</summary>
           <p>Every module can be seamlessly initiated, after being integrated with a VR headset. A step-by-step guide is
             included in all our products.</p>
         </details>
 
         <details>
-          <summary>
-            I want to be assured of the quality of a particular module. Can I have a demo?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>I want to be assured of the quality of a particular module. Can I have a demo?</summary>
           <p>Certainly. Although the significantly short duration, the fidelity is exactly the same.</p>
         </details>
 
         <details>
-          <summary>
-            Do I need a wi-fi connection to start a module?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>Do I need a wi-fi connection to start a module?</summary>
           <p>There is no such restriction. A connection to the internet is required only for the download itself.</p>
         </details>
 
         <details>
-          <summary>
-            Can I share my module?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
+          <summary>Can I share my module?</summary>
           <p>Modules are bound with your personal email address, and this link can't be undone.</p>
         </details>
 
         <details>
-          <summary>
-            How can I make a request?
-            <div class="arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
-              </svg>
-            </div>
-          </summary>
-          <p>All modules are named. The name can be viewed by a simple hover. After sending us the name/names to
-            my_vr_choice@rejoice.io, you will receive your collect path.</p>
+          <summary>How can I make a request?</summary>
+          <p>All modules are named. The name can be viewed by a simple hover. After sending us the name/names to <a
+              href="mailto:my_vr_choice@rejoice.io">my_vr_choice@rejoice.io</a>, you will receive your collect path.</p>
         </details>
       </div>
     </section>
@@ -147,53 +91,33 @@
     </section>
 
     <dialog class="dialog">
-      <form id="form">
-        <h3>Fill the fields below</h3>
-        <div class="input-row">
-          <div class="label-svg-container">
-            <label for="name">Your name</label>
-            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C"
-                stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-          </div>
+      <form action="/faq.html" method="GET">
+        <h4>Fill the fields below</h4>
+
+        <div>
           <input id="name" type="text" name="name" maxlength="40" autocomplete="off">
-          <p class="error-msg js-error-msg-name"></p>
+          <label for="name">Your name</label>
+
+          <p class="js-error-msg-name"></p>
         </div>
 
-        <div class="input-area">
-          <div class="label-svg-container">
-            <label for="query">Your question</label>
-            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C"
-                stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-          </div>
+        <div>
           <textarea id="query" type="text" name="query" maxlength="400"></textarea>
-          <p class="error-msg js-error-msg-query"></p>
+          <label for="query">Your question</label>
+
+          <p class="js-error-msg-query"></p>
         </div>
 
-        <div class="input-row">
-          <div class="label-svg-container">
-            <label for="email">Your email</label>
-            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 14.5L12 19.5L7 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path opacity="0.5" d="M12 19.5C12 19.5 12 11.1667 12 9.5C12 7.83333 11 4.5 7 4.5" stroke="#1C274C"
-                stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-          </div>
+        <div>
           <input id="email" type="text" name="email" maxlength="80" autocomplete="off">
-          <p class="error-msg js-error-msg-email"></p>
+          <label for="email">Your email</label>
+
+          <p class="js-error-msg-email"></p>
         </div>
 
-        <div class="form-btn-container">
-          <button class="form-btn js-cancel-form" type="button">Cancel</button>
-          <button class="form-btn" type="submit">Submit</button>
+        <div>
+          <input type="button" value="Cancel" class="js-cancel-form">
+          <input type="button" value="Submit" class="js-submit-form">
         </div>
       </form>
     </dialog>

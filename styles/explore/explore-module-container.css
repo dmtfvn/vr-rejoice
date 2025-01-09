@@ -28,9 +28,9 @@
 
 .module-container section>p {
   display: none;
-  color: var(--yt-clr);
   font-size: 2.2em;
   font-weight: 600;
+  color: var(--yt-clr);
   align-self: center;
   grid-area: 2 / 2 / 3 / 3;
 }

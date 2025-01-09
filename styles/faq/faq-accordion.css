@@ -23,6 +23,13 @@ main>section:nth-of-type(3)>div details {
   }
 }
 
+main>section:nth-of-type(3)>div>details a {
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--bk-ish-clr);
+}
+
 main>section:nth-of-type(3)>div details,
 main>section:nth-of-type(3)>div details>summary {
   -webkit-tap-highlight-color: transparent;
@@ -36,7 +43,7 @@ main>section:nth-of-type(3)>div details>summary {
   display: flex;
   justify-content: space-between;
   font-family: Palanquin, Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
@@ -44,19 +51,17 @@ main>section:nth-of-type(3)>div details>p {
   padding-top: 20px;
 }
 
-.arrow {
+main>section:nth-of-type(3)>div details>summary::after {
   display: flex;
-  align-items: center;
-  background: none;
-  border: none;
+  align-self: center;
+  content: '\f107';
+  font-family: 'Font Awesome 6 Free';
+  font-size: 1em;
   margin-left: 15px;
-}
-
-.arrow svg {
   transition: transform 0.5s;
 }
 
-details[open] .arrow svg {
-  fill: var(--gd-clr);
+main>section:nth-of-type(3)>div details[open]>summary::after {
+  color: var(--gd-clr);
   transform: rotate(180deg);
 }

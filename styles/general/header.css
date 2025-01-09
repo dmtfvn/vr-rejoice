@@ -37,8 +37,8 @@ header>nav>ul>li {
 
 header>nav>ul>li>a {
   font-family: inherit;
-  color: var(--gy-clr);
   font-size: 0.85rem;
+  color: var(--gy-clr);
   text-decoration: none;
   padding: 5px;
   cursor: pointer;

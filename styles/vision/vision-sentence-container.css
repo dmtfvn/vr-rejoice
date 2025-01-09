@@ -9,8 +9,8 @@ main>section:nth-of-type(4) {
 
 main>section:nth-of-type(2) h3,
 main>section:nth-of-type(2) h5 {
-  color: var(--gy-mid-clr);
   font-weight: 700;
+  color: var(--gy-mid-clr);
 }
 
 main>section:nth-of-type(4) h6 {

@@ -25,15 +25,15 @@
 }
 
 .middle-entity {
-  color: var(--gd-drk-clr);
   font-size: 2.2rem;
+  color: var(--gd-drk-clr);
   
 }
 
 .left-entity,
 .right-entity {
-  color: var(--gd-ish-clr);
   font-size: 1.2rem;
+  color: var(--gd-ish-clr);
 }
 
 .signature {

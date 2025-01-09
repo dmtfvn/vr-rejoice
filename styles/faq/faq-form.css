@@ -1,19 +1,19 @@
 .dialog {
-  width: 450px;
+  width: min(450px, 100%);
   margin: auto;
   border: 5px solid var(--gd-ish-clr);
 }
 
 .dialog::backdrop {
-  background: hsla(0, 2%, 45%, 0.85);
+  background-color: hsla(0, 2%, 45%, 0.85);
   backdrop-filter: blur(5px);
 }
 
-.dialog form {
+.dialog>form {
   display: flex;
   flex-direction: column;
   padding: 30px 15px;
-  animation: slide .3s ease;
+  animation: slide 0.3s ease;
 }
 
 @keyframes slide {
@@ -26,91 +26,76 @@
   }
 }
 
-form h3 {
+.dialog>form>h4 {
   color: var(--gy-clr);
-  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 60px;
 }
 
-.label-svg-container {
+.dialog>form>div:not(:last-of-type) {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
-.label-svg-container label {
-  color: var(--gy-clr);
-  padding-left: 2px;
-}
-
-.label-svg-container svg {
-  margin-left: 5px;
-  height: 24px;
-  width: 24px;
-}
-
-.input-row,
-.input-area {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.input-row input {
-  height: 58px;
-}
-
-.input-area textarea {
+.dialog>form>div>textarea {
   height: 300px;
   resize: none;
-  line-height: 1.6;
 }
 
-.input-row input,
-.input-area textarea {
-  width: 100%;
+.dialog>form>div>input[type="text"],
+.dialog>form>div>textarea {
   padding: 20px;
-  font-family: Helvetica, Arial;
-  font-size: 1rem;
   outline: none;
+  border-radius: 5px;
   border: 1px solid hsl(0, 7.5%, 87.5%);
 }
 
-.input-row input:focus,
-.input-area textarea:focus {
+.dialog>form>div>input[type="text"]:focus,
+.dialog>form>div>textarea:focus {
   border-color: var(--gd-drk-clr);
   box-shadow: 0 0 8px var(--gd-drk-clr);
 }
 
-.input-row input::placeholder,
-.input-area textarea::placeholder {
-  font-family: Roboto, Arial;
-  font-size: 1rem;
-  text-align: center;
+.dialog>form>div>input[type="text"]+label,
+.dialog>form>div>textarea+label {
+  display: flex;
+  color: var(--gy-clr);
+  order: -1;
 }
 
-.form-btn-container {
+.dialog>form>div>input[type="text"]+label::after,
+.dialog>form>div>textarea+label::after {
+  display: flex;
+  content: '\f149';
+  font-family: 'Font Awesome 6 Free';
+  font-size: 1em;
+  color: var(--gy-mid-clr);
+  padding-left: 15px;
+}
+
+.dialog>form>div:last-of-type {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.form-btn {
+.dialog>form>div:last-of-type>input {
   background: none;
-  color: var(--gy-mid-clr);
-  width: 100px;
-  height: 50px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 700;
+  color: var(--gy-mid-clr);
+  padding: 15px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    color: var(--gy-clr);
+  }
 }
 
-.form-btn:hover {
-  color: var(--gy-clr);
-}
-
-.error-msg {
+.dialog>form>div>p {
   color: var(--gd-drk-clr);
-  height: 32px;
   padding-top: 8px;
   text-align: center;
 }
