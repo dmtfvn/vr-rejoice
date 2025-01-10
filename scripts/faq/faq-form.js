@@ -12,6 +12,10 @@ const errorMsgName = document.querySelector('.js-error-msg-name');
 const errorMsgQuery = document.querySelector('.js-error-msg-query');
 const errorMsgEmail = document.querySelector('.js-error-msg-email');
 
+let curUser = '';
+let curQuery = '';
+let curEmail = '';
+
 function clearErrorMsg() {
   errorMsgName.textContent = '';
   errorMsgQuery.textContent = '';
@@ -22,33 +26,16 @@ openForm.addEventListener('click', () => {
   dialog.showModal();
 
   form.reset();
+  clearErrorMsg();
 });
 
 closeForm.addEventListener('click', () => {
   dialog.close();
-
-  clearErrorMsg();
 });
 
-dialog.addEventListener('keydown', (e) => {
-  const pressKey = e.key;
-
-  if (pressKey === 'Escape') {
-    form.reset();
-
-    clearErrorMsg();
-  }
-});
-
-function removeErrorMsg(inputValue, errorMsgEl) {
-  if (inputValue !== '') {
-    errorMsgEl.textContent = '';
-  }
+function removeErrorMsg(errorMsgEl) {
+  errorMsgEl.textContent = '';
 }
-
-let curUser = '';
-let curQuery = '';
-let curEmail = '';
 
 [inputName, inputQuery, inputEmail].forEach(elem => {
   elem.addEventListener('input', () => {
@@ -56,9 +43,17 @@ let curEmail = '';
     curQuery = inputQuery.value.trim();
     curEmail = inputEmail.value.trim();
 
-    removeErrorMsg(curUser, errorMsgName);
-    removeErrorMsg(curQuery, errorMsgQuery);
-    removeErrorMsg(curEmail, errorMsgEmail);
+    if (curUser) {
+      removeErrorMsg(errorMsgName);
+    }
+
+    if (curQuery) {
+      removeErrorMsg(errorMsgQuery);
+    }
+
+    if (curEmail) {
+      removeErrorMsg(errorMsgEmail);
+    }
   });
 });
 

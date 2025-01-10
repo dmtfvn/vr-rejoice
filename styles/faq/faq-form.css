@@ -41,7 +41,7 @@
 
 .dialog>form>section>input[type="text"],
 .dialog>form>section>textarea {
-  padding: 20px;
+  padding: 15px;
   outline: none;
   border-radius: 5px;
   border: 1px solid hsl(0, 7.5%, 87.5%);
