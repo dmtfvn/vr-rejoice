@@ -33,35 +33,42 @@
   margin-bottom: 60px;
 }
 
-.dialog>form>div:not(:last-of-type) {
+.dialog>form>section {
   display: flex;
   flex-direction: column;
 }
 
-.dialog>form>div>textarea {
-  height: 300px;
+.dialog>form>section>p {
+  height: 70px;
+  color: var(--gd-drk-clr);
+  padding-top: 10px;
+  text-align: center;
+}
+
+.dialog>form>section>textarea {
+  height: 250px;
   resize: none;
 }
 
-.dialog>form>div>input[type="text"],
-.dialog>form>div>textarea,
-.dialog>form>div>input[type="email"] {
+.dialog>form>section>input[type="text"],
+.dialog>form>section>textarea,
+.dialog>form>section>input[type="email"] {
   padding: 20px;
   outline: none;
   border-radius: 5px;
   border: 1px solid hsl(0, 7.5%, 87.5%);
 }
 
-.dialog>form>div>input[type="text"]:focus,
-.dialog>form>div>textarea:focus,
-.dialog>form>div>input[type="email"]:focus {
+.dialog>form>section>input[type="text"]:focus,
+.dialog>form>section>textarea:focus,
+.dialog>form>section>input[type="email"]:focus {
   border-color: var(--gd-drk-clr);
   box-shadow: 0 0 8px var(--gd-drk-clr);
 }
 
-.dialog>form>div>input[type="text"]+label,
-.dialog>form>div>textarea+label,
-.dialog>form>div>input[type="email"]+label {
+.dialog>form>section>input[type="text"]+label,
+.dialog>form>section>textarea+label,
+.dialog>form>section>input[type="email"]+label {
   display: flex;
   font-weight: 500;
   color: var(--gy-clr);
@@ -69,9 +76,9 @@
   order: -1;
 }
 
-.dialog>form>div>input[type="text"]+label::after,
-.dialog>form>div>textarea+label::after,
-.dialog>form>div>input[type="email"]+label::after {
+.dialog>form>section>input[type="text"]+label::after,
+.dialog>form>section>textarea+label::after,
+.dialog>form>section>input[type="email"]+label::after {
   display: flex;
   content: '\f149';
   font-family: 'Font Awesome 6 Free';
@@ -80,13 +87,13 @@
   padding-left: 15px;
 }
 
-.dialog>form>div:last-of-type {
+.dialog>form>div {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.dialog>form>div:last-of-type>input {
+.dialog>form>div>input {
   background: none;
   font-size: 1.2em;
   font-weight: 700;
@@ -98,11 +105,4 @@
   &:hover {
     color: var(--gy-clr);
   }
-}
-
-.dialog>form>div>p {
-  height: 70px;
-  color: var(--gd-drk-clr);
-  padding-top: 10px;
-  text-align: center;
 }

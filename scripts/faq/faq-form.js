@@ -12,42 +12,33 @@ const errorMsgName = document.querySelector('.js-error-msg-name');
 const errorMsgQuery = document.querySelector('.js-error-msg-query');
 const errorMsgEmail = document.querySelector('.js-error-msg-email');
 
-function eraseDataAndMsg() {
-  inputName.value = '';
+function clearErrorMsg() {
   errorMsgName.textContent = '';
-  inputQuery.value = '';
   errorMsgQuery.textContent = '';
-  inputEmail.value = '';
   errorMsgEmail.textContent = '';
 }
 
-openForm.addEventListener('click', function () {
+openForm.addEventListener('click', () => {
   dialog.showModal();
 
-  inputName.focus();
-
-  inputName.value = '';
-  inputQuery.value = '';
-  inputEmail.value = '';
+  form.reset();
 });
 
-closeForm.addEventListener('click', function () {
+closeForm.addEventListener('click', () => {
   dialog.close();
 
-  eraseDataAndMsg();
+  clearErrorMsg();
 });
 
-dialog.addEventListener('keydown', function (e) {
+dialog.addEventListener('keydown', (e) => {
   const pressKey = e.key;
 
   if (pressKey === 'Escape') {
-    eraseDataAndMsg();
+    form.reset();
+
+    clearErrorMsg();
   }
 });
-
-let curUser = '';
-let curQuery = '';
-let curEmail = '';
 
 function removeErrorMsg(inputValue, errorMsgEl) {
   if (inputValue !== '') {
@@ -55,8 +46,12 @@ function removeErrorMsg(inputValue, errorMsgEl) {
   }
 }
 
+let curUser = '';
+let curQuery = '';
+let curEmail = '';
+
 [inputName, inputQuery, inputEmail].forEach(elem => {
-  elem.addEventListener('input', function () {
+  elem.addEventListener('input', () => {
     curUser = inputName.value.trim();
     curQuery = inputQuery.value.trim();
     curEmail = inputEmail.value.trim();
@@ -78,17 +73,21 @@ function handleSubmit(e) {
 
   const formData = Object.fromEntries(data);
 
-  if (formData.name === '' || formData.name.length !== 0 && curUser.length < 2) {
+  const name = formData.name;
+  const query = formData.query;
+  const email = formData.email;
+
+  if (name === '' || name.length !== 0 && name.length < 2) {
     e.preventDefault();
 
     errorMsgName.textContent = 'Name must be longer than 1 character';
     inputName.focus();
-  } else if (formData.query === '' || formData.query.length !== 0 && curQuery.length <= 30) {
+  } else if (query === '' || query.length !== 0 && query.length <= 30) {
     e.preventDefault();
 
     errorMsgQuery.textContent = 'Question must be longer than 30 characters';
     inputQuery.focus();
-  } else if (formData.email === '' || formData.email.length !== 0 && curEmail.length <= 7) {
+  } else if (email === '' || email.length !== 0 && email.length <= 7) {
     e.preventDefault();
 
     errorMsgEmail.textContent = 'Email must be longer than 7 characters';
@@ -100,8 +99,6 @@ function handleSubmit(e) {
     inputEmail.focus();
   } else {
     dialog.close();
-
-    location.reload();
   }
 }
 

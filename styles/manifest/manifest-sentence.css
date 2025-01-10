@@ -17,26 +17,6 @@ main>div>section:first-of-type {
   margin-bottom: 30px;
 }
 
-main>div>section:nth-of-type(2) p {
-  font-family: Palanquin, Arial, sans-serif;
-  font-size: 1.1em;
-  margin-bottom: 30px;
-}
-
-main>div>section:nth-of-type(2) p:last-of-type {
-  text-align: end;
-}
-
-main>div>section:last-of-type {
-  display: flex;
-  align-self: flex-end;
-}
-
-main>div>section:last-of-type h1 {
-  font-family: Cherish, 'Times New Roman', serif;
-  padding-right: 8px;
-}
-
 main>div>section:first-of-type>h6:nth-of-type(1),
 main>div>section:first-of-type>h6:nth-of-type(3) {
   font-size: 1.2em;
@@ -88,4 +68,25 @@ main>div>section:first-of-type>h6:nth-of-type(3) {
   to {
     transform: translateX(0px);
   }
+}
+
+main>div>section:nth-of-type(2) p:not(:last-of-type) {
+  font-family: Palanquin, Arial, sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+main>div>section:nth-of-type(2) p:last-of-type {
+  text-align: end;
+  margin-bottom: 60px;
+}
+
+main>div>section:last-of-type {
+  display: flex;
+  align-self: flex-end;
+}
+
+main>div>section:last-of-type h1 {
+  font-family: Cherish, 'Times New Roman', serif;
+  padding-right: 8px;
 }
