@@ -17,6 +17,7 @@
 }
 
 .dialog>form>h4 {
+  font-family: Palanquin, Arial, sans-serif;
   font-weight: 500;
   color: var(--gy-clr);
   text-align: center;
