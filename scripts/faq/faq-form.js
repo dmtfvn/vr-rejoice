@@ -24,6 +24,8 @@ function eraseDataAndMsg() {
 openForm.addEventListener('click', function () {
   dialog.showModal();
 
+  inputName.focus();
+
   inputName.value = '';
   inputQuery.value = '';
   inputEmail.value = '';
