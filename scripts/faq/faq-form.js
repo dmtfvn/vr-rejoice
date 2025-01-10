@@ -69,25 +69,17 @@ function checkForValidEmail(email) {
 function handleSubmit(e) {
   const isEmailValid = checkForValidEmail(curEmail);
 
-  const data = new FormData(e.target);
-
-  const formData = Object.fromEntries(data);
-
-  const name = formData.name;
-  const query = formData.query;
-  const email = formData.email;
-
-  if (name === '' || name.length !== 0 && name.length < 2) {
+  if (curUser === '' || curUser.length !== 0 && curUser.length < 2) {
     e.preventDefault();
 
     errorMsgName.textContent = 'Name must be longer than 1 character';
     inputName.focus();
-  } else if (query === '' || query.length !== 0 && query.length <= 30) {
+  } else if (curQuery === '' || curQuery.length !== 0 && curQuery.length <= 30) {
     e.preventDefault();
 
     errorMsgQuery.textContent = 'Question must be longer than 30 characters';
     inputQuery.focus();
-  } else if (email === '' || email.length !== 0 && email.length <= 7) {
+  } else if (curEmail === '' || curEmail.length !== 0 && curEmail.length <= 7) {
     e.preventDefault();
 
     errorMsgEmail.textContent = 'Email must be longer than 7 characters';

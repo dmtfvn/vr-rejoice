@@ -16,16 +16,6 @@
   animation: slide 0.3s ease;
 }
 
-@keyframes slide {
-  from {
-    transform: translateY(-25px);
-  }
-
-  to {
-    transform: translateY(0px);
-  }
-}
-
 .dialog>form>h4 {
   font-weight: 500;
   color: var(--gy-clr);
@@ -38,7 +28,7 @@
   flex-direction: column;
 }
 
-.dialog>form>section>p {
+.dialog>form>section>span {
   height: 70px;
   color: var(--gd-drk-clr);
   padding-top: 10px;
@@ -46,13 +36,11 @@
 }
 
 .dialog>form>section>textarea {
-  height: 250px;
   resize: none;
 }
 
 .dialog>form>section>input[type="text"],
-.dialog>form>section>textarea,
-.dialog>form>section>input[type="email"] {
+.dialog>form>section>textarea {
   padding: 20px;
   outline: none;
   border-radius: 5px;
@@ -60,15 +48,13 @@
 }
 
 .dialog>form>section>input[type="text"]:focus,
-.dialog>form>section>textarea:focus,
-.dialog>form>section>input[type="email"]:focus {
+.dialog>form>section>textarea:focus {
   border-color: var(--gd-drk-clr);
   box-shadow: 0 0 8px var(--gd-drk-clr);
 }
 
 .dialog>form>section>input[type="text"]+label,
-.dialog>form>section>textarea+label,
-.dialog>form>section>input[type="email"]+label {
+.dialog>form>section>textarea+label {
   display: flex;
   font-weight: 500;
   color: var(--gy-clr);
@@ -77,8 +63,7 @@
 }
 
 .dialog>form>section>input[type="text"]+label::after,
-.dialog>form>section>textarea+label::after,
-.dialog>form>section>input[type="email"]+label::after {
+.dialog>form>section>textarea+label::after {
   display: flex;
   content: '\f149';
   font-family: 'Font Awesome 6 Free';
@@ -88,9 +73,10 @@
 }
 
 .dialog>form>div {
+  background-color: hsl(0, 5%, 95%);
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  border-radius: 5px;
 }
 
 .dialog>form>div>input {
@@ -104,5 +90,15 @@
 
   &:hover {
     color: var(--gy-clr);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-25px);
+  }
+
+  to {
+    transform: translateY(0px);
   }
 }
