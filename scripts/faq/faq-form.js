@@ -100,6 +100,8 @@ function handleSubmit(e) {
     inputEmail.focus();
   } else {
     dialog.close();
+
+    location.reload();
   }
 }
 

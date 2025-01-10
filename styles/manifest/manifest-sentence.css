@@ -24,8 +24,7 @@ main>div>section:nth-of-type(2) p {
 }
 
 main>div>section:nth-of-type(2) p:last-of-type {
-  display: flex;
-  justify-self: end;
+  text-align: end;
 }
 
 main>div>section:last-of-type {
