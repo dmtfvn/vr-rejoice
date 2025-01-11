@@ -19,7 +19,7 @@
 .dialog>form>h4 {
   font-family: Palanquin, Arial, sans-serif;
   font-weight: 500;
-  color: var(--gy-clr);
+  color: var(--gy-mid-clr);
   text-align: center;
   margin-bottom: 60px;
 }
@@ -58,7 +58,7 @@
 .dialog>form>section>textarea+label {
   display: flex;
   font-weight: 500;
-  color: var(--gy-clr);
+  color: hsl(0, 20%, 40%);
   padding-left: 15px;
   order: -1;
 }
@@ -69,7 +69,7 @@
   content: '\f149';
   font-family: 'Font Awesome 6 Free';
   font-size: 1em;
-  color: var(--gy-mid-clr);
+  color: hsla(0, 20%, 40%, 0.6);;
   padding-left: 15px;
 }
 
