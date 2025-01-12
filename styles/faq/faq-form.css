@@ -27,13 +27,13 @@
 .dialog>form>section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
 }
 
 .dialog>form>section>span {
+  height: 80px;
   color: var(--gd-drk-clr);
-  padding-top: 10px;
   text-align: center;
+  padding-top: 10px;
 }
 
 .dialog>form>section>textarea {
